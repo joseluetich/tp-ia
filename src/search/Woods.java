@@ -2,15 +2,15 @@ package search;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.environment.Environment;
 
-public class AmbienteCaperucita extends Environment {
+public class Woods extends Environment {
 
-    public AmbienteCaperucita() {
+    public Woods() {
         // Create the environment state
-        this.environmentState = new EstadoAmbiente();
+        this.environmentState = new WoodsState();
     }
 
-    public EstadoAmbiente getEnvironmentState() {
-        return (EstadoAmbiente) super.getEnvironmentState();
+    public WoodsState getEnvironmentState() {
+        return (WoodsState) super.getEnvironmentState();
     }
 
     /**
@@ -26,7 +26,7 @@ public class AmbienteCaperucita extends Environment {
     	CaperucitaPerception perception = new CaperucitaPerception();
 		
         //Pimero chequeamos que la habitación en la que está el agente está sucia
-        Habitacion h = this.getEnvironmentState().getposicionAspiradora();
+        /*Habitacion h = this.getEnvironmentState().getposicionAspiradora();
         boolean estaSucia = false;
         for(Habitacion hab : this.getEnvironmentState().gethabitacionesSucias())
         	if(hab.getNombre().equals(h.getNombre()))
@@ -37,7 +37,7 @@ public class AmbienteCaperucita extends Environment {
         	perception.setsuciedad(1);
         else
         	perception.setsuciedad(0);
-        
+        */
         // Return the perception
         return perception;
     }
