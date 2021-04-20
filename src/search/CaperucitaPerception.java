@@ -13,12 +13,12 @@ public class CaperucitaPerception extends Perception {
     public static int CANDY_PERCEPTION = 3;
     public static int FLOWER_PERCEPTION = 4;
 
-    private int leftSensor;
-    private int topSensor;
-    private int rightSensor;
-    private int bottomSensor;
+    private int wolfSensor;
+    private int flowerSensor;
+    private int candySensor;
+    private int treeSensor;
     private int lives;
-    private int candy;
+    private int candies;
 
     public CaperucitaPerception() {
         lives = 3;
@@ -28,9 +28,6 @@ public class CaperucitaPerception extends Perception {
         super(agent, environment);
     }
 
-    /**
-     * This method is used to setup the perception.
-     */
     @Override
     public void initPerception(Agent agent, Environment environment) {
         Caperucita caperucita = (Caperucita) agent;
@@ -39,53 +36,11 @@ public class CaperucitaPerception extends Perception {
 
         int row = environmentState.getAgentPosition()[0];
         int col = environmentState.getAgentPosition()[1];
-        /*
-        this.setTopSensor(ambienteCaperucita.getTopCell(row, col));
+        
+        /*this.setTopSensor(ambienteCaperucita.getTopCell(row, col));
         this.setLeftSensor(ambienteCaperucita.getLeftCell(row, col));
         this.setRightSensor(ambienteCaperucita.getRightCell(row, col));
         this.setBottomSensor(ambienteCaperucita.getBottomCell(row, col));*/
-    }
-
-    // The following methods are Pacman-specific:
-
-    public int getLeftSensor() {
-        return leftSensor;
-    }
-
-    public void setLeftSensor(int leftSensor) {
-        this.leftSensor = leftSensor;
-    }
-
-    public int getTopSensor() {
-        return topSensor;
-    }
-
-    public void setTopSensor(int topSensor) {
-        this.topSensor = topSensor;
-    }
-
-    public int getRightSensor() {
-        return rightSensor;
-    }
-
-    public void setRightSensor(int rightSensor) {
-        this.rightSensor = rightSensor;
-    }
-
-    public int getBottomSensor() {
-        return bottomSensor;
-    }
-
-    public void setBottomSensor(int bottomSensor) {
-        this.bottomSensor = bottomSensor;
-    }
-
-    public int getLives() {
-        return lives;
-    }
-
-    public void setLives(int lives) {
-        this.lives = lives;
     }
 
     @Override
@@ -94,14 +49,64 @@ public class CaperucitaPerception extends Perception {
 
         str.append("Lives: " + this.lives);
         str.append("; ");
-        str.append("Left Sensor: " + this.leftSensor);
+        str.append("Candies: " + this.candies);
         str.append("; ");
-        str.append("Up Sensor: " + this.topSensor);
+        str.append("Wolf Sensor: " + this.wolfSensor);
         str.append("; ");
-        str.append("Right Sensor: " + this.rightSensor);
+        str.append("Flower Sensor: " + this.flowerSensor);
         str.append("; ");
-        str.append("Down Sensor: " + this.bottomSensor);
+        str.append("Tree Sensor: " + this.treeSensor);
+        str.append("; ");
+        str.append("Candy Sensor: " + this.candySensor);
 
         return str.toString();
+    }
+    
+    public int getWolfSensor() {
+		return wolfSensor;
+	}
+
+	public void setWolfSensor(int wolfSensor) {
+		this.wolfSensor = wolfSensor;
+	}
+
+	public int getFlowerSensor() {
+		return flowerSensor;
+	}
+
+	public void setFlowerSensor(int flowerSensor) {
+		this.flowerSensor = flowerSensor;
+	}
+
+	public int getCandySensor() {
+		return candySensor;
+	}
+
+	public void setCandySensor(int candySensor) {
+		this.candySensor = candySensor;
+	}
+
+	public int getTreeSensor() {
+		return treeSensor;
+	}
+
+	public void setTreeSensor(int treeSensor) {
+		this.treeSensor = treeSensor;
+	}
+
+	public int getCandies() {
+		return candies;
+	}
+
+	public void setCandies(int candies) {
+		this.candies = candies;
+	}
+
+	public int getLives() {
+        return lives;
+    }
+
+    public void setLives(int lives) {
+        this.lives = lives;
     }
 }

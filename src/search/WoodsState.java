@@ -8,38 +8,37 @@ import frsf.cidisi.faia.state.EnvironmentState;
  */
 public class WoodsState extends EnvironmentState {
 	
-    private Casilla[][] wood;
+	 /*Este atributo inicializa el ambiente.
+	  * Asi como en el pacman la comida disminuia en el atributo
+	  * world del pacman, ahora las actualizaciones del bosque
+	  * se realizaran en el wood de caperucita*/
+	private int[][] wood;
     private int candiesQuantity;
     private int[] agentPosition;
     private int agentLives;
     
     public WoodsState() {
-        wood = new Casilla[9][14];
+        wood = new int[9][14];
     	this.initState();
     }
 
-    /**
-     * This method is used to setup the initial real world.
-     */
     @Override
     public void initState() {
     	this.setCandiesQuantity(3);
     	
-    	//El estado inicial del estado del Ambiente; el escenario de entrada
     	for(int i=0; i<9; i++) {
     		for(int j=0; j<14; j++) {
-    			wood[i][j] = new Casilla();
+    			wood[i][j] = CaperucitaPerception.EMPTY_PERCEPTION;
     		}
     	}
     	this.setAgentPosition(new int[]{1, 1}); //ver
+    	this.setAgentLives(3);
     	
+    	//TODO Diseñar el nivel. Ver como se podrian
+    	// inicializar varios niveles (como usarlos)
     	
-    	//TODO ver como se inicializa el tipo de casilla 	
-    	// ver si es necesario la entidad casilla. puedo poner
-    	// numeros en cada celda, dependiendo de la percepcion directamente
-    	
-    	/*Ejemplo pacman
-    	// Sets all cells as empty
+    	//Ejemplo pacman
+    	/*
         for (int row = 0; row < world.length; row++) {
             for (int col = 0; col < world.length; col++) {
                 world[row][col] = PacmanPerception.EMPTY_PERCEPTION;
@@ -55,36 +54,43 @@ public class WoodsState extends EnvironmentState {
         world[1][2] = PacmanPerception.FOOD_PERCEPTION;
 
         this.setAgentPosition(new int[]{1, 1});
-        this.setAgentEnergy(50);*/
+        this.setAgentEnergy(50);
+        */
     }
 
-    /**
-     * String representation of the real world state.
-     */
     @Override
     public String toString() {
     	
         String str = "";
-        /*
-        str += "Habitaciones sucias: {";
-        for(Habitacion h : habitacionesSucias)
-        	str+= h.toString() + ", ";
-        str = str.substring(0,str.length()-2);
-        str += "}\n";
+        int dulces = 0;
+        str += "Cantidad De Dulces: { ";
+        for(int i=0; i<9; i++) {
+    		for(int j=0; j<14; j++) {
+    			if(wood[i][j] == CaperucitaPerception.CANDY_PERCEPTION) {
+    				dulces++;
+    			}
+    		}
+        }
+        str += (dulces+" }\n");
         
-        str += "Posición del agente: ";
-        str += posicionAspiradora.toString(); 
-         */
+        str += ("Cantidad de Vidas: { "+agentLives+" }"); 
+        
+        str += ("Posicion del Agente: { "+agentPosition[0]+", "+agentPosition[1]+" }"); 
+         
         return str;
     }
 
-	public Casilla[][] getWood() {
+	public int[][] getWood() {
 		return wood;
 	}
 
-	public void setWood(Casilla[][] wood) {
+	public void setWood(int[][] wood) {
 		this.wood = wood;
 	}
+	
+	public void setWood(int row, int col, int value) {
+        this.wood[row][col] = value;
+    }
 
 	public int getCandiesQuantity() {
 		return candiesQuantity;
@@ -102,5 +108,15 @@ public class WoodsState extends EnvironmentState {
         this.agentPosition = agentPosition;
     }
 
+	public int getAgentLives() {
+		return agentLives;
+	}
+
+	public void setAgentLives(int agentLives) {
+		this.agentLives = agentLives;
+	}
+
+    
+    
 }
 

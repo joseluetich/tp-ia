@@ -3,9 +3,6 @@ package search;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 
-/**
- 
- */
 public class CaperucitaState extends SearchBasedAgentState {
 
     private int currentRow;
@@ -13,23 +10,42 @@ public class CaperucitaState extends SearchBasedAgentState {
     private int orientation;
     private int candies;
     private int lives;
+    private int[][] wood;
     
-    public CaperucitaState(int currentRow, int currentColumn, int orientation, int candies, int lives) {
+    public CaperucitaState(int currentRow, int currentColumn, int orientation, int candies, int lives, int[][] wood) {
 		super();
 		this.currentRow = currentRow;
 		this.currentColumn = currentColumn;
 		this.orientation = orientation;
 		this.candies = candies;
 		this.lives = lives;
+		this.wood = wood;
 	}
     
     public CaperucitaState() {
 		super();
 		this.candies = 0;
+		wood = new int[9][14];
 		this.lives = 3;
 		this.initState();
 	}
+    
     //TODO Definir metodos goForward, turnLeft, turnRight, eatCandy
+    
+    @Override
+    public void initState() {
+        for (int i=0; i<wood.length; i++) {
+            for (int j=0; j<wood.length; j++) {
+                wood[i][j] = CaperucitaPerception.UNKNOWN_PERCEPTION;
+            }
+        }
+
+        //TODO Definir posicion y orientacion inicial del agente
+        this.setCurrentRow(0);
+        this.setCurrentColumn(0);
+        this.setOrientation(0);
+
+    }
     
     /**
      * This method clones the state of the agent. It's used in the search
@@ -37,20 +53,19 @@ public class CaperucitaState extends SearchBasedAgentState {
      */
     @Override
     public SearchBasedAgentState clone() {
-        int[][] newWorld = new int[4][4];
-
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                newWorld[row][col] = world[row][col];
+        int[][] newWood = new int[9][14];
+        for (int i=0; i<wood.length; i++) {
+            for (int j=0; j<wood.length; j++) {
+            	newWood[i][j] = wood[i][j];
             }
         }
 
-        int[] newPosition = new int[2];
-        newPosition[0] = position[0];
-        newPosition[1] = position[1];
-
-        PacmanAgentState newState = new PacmanAgentState(newWorld,
-                this.getRowPosition(), this.getColumnPosition(), this.energy);
+        int newRow = this.currentRow;
+        int newColumn = this.currentColumn;
+        int newOrientation = this.orientation;
+        
+        CaperucitaState newState = new CaperucitaState(
+                newRow, newColumn, newOrientation, candies, lives, newWood);
 
         return newState;
     }
@@ -61,12 +76,19 @@ public class CaperucitaState extends SearchBasedAgentState {
      */
     @Override
     public void updateState(Perception p) {
-        PacmanPerception pacmanPerception = (PacmanPerception) p;
+        CaperucitaPerception caperucitaPerception = (CaperucitaPerception) p;
 
-        int row = this.getRowPosition();
-        int col = this.getColumnPosition();
+        int row = this.getCurrentRow();
+        int col = this.getCurrentColumn();
 
-        if (col == 0) {
+        /*En el caso del pacman, usa las percepciones y analiza si 
+         * es la primera o ultima fila/columna para hacerlo aparecer
+         * por el otro lado.
+         * 
+         * Caperucita deberia usar los sensores para ver si hay lobo, 
+         * flores, dulces o arboles.
+         */
+        /*if (col == 0) {
             col = 3;
         } else {
             col = col - 1;
@@ -104,44 +126,25 @@ public class CaperucitaState extends SearchBasedAgentState {
         }
         world[row][col] = pacmanPerception.getBottomSensor();
 
-        energy = pacmanPerception.getEnergy();
+        energy = pacmanPerception.getEnergy();*/
     }
 
-    /**
-     * This method is optional, and sets the initial state of the agent.
-     */
-    @Override
-    public void initState() {
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                world[row][col] = PacmanPerception.UNKNOWN_PERCEPTION;
-            }
-        }
-        
-        this.setRowPosition(1);
-        this.setColumnPosition(1);
-
-        this.setEnergy(50);
-    }
-
-    /**
-     * This method returns the String representation of the agent state.
-     */
     @Override
     public String toString() {
         String str = "";
 
-        str = str + " position=\"(" + getRowPosition() + "," + "" + getColumnPosition() + ")\"";
-        str = str + " energy=\"" + energy + "\"\n";
+        str = str + " position=\"(" + getCurrentRow() + "," + "" + getCurrentColumn() + ")\"";
+        str = str + " candies=\"" + candies + "\"";
+        str = str + " lives=\"" + lives + "\"\n";
 
-        str = str + "world=\"[ \n";
-        for (int row = 0; row < world.length; row++) {
+        str = str + "wood=\"[ \n";
+        for (int i=0; i<wood.length; i++) {
             str = str + "[ ";
-            for (int col = 0; col < world.length; col++) {
-                if (world[row][col] == -1) {
+            for (int j=0; j<wood.length; j++) {
+                if (wood[i][j] == -1) {
                     str = str + "* ";
                 } else {
-                    str = str + world[row][col] + " ";
+                    str = str + wood[i][j] + " ";
                 }
             }
             str = str + " ]\n";
@@ -151,97 +154,54 @@ public class CaperucitaState extends SearchBasedAgentState {
         return str;
     }
 
-    /**
-     * This method is used in the search process to verify if the node already
-     * exists in the actual search.
-     */
+    /* This method is used in the search process to verify if the node already
+     * exists in the actual search. */
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof PacmanAgentState))
+        if (!(obj instanceof CaperucitaState))
             return false;
 
-        int[][] worldObj = ((PacmanAgentState) obj).getWorld();
-        int[] positionObj = ((PacmanAgentState) obj).getPosition();
+        int[][] woodObj = ((CaperucitaState) obj).getWood();
+        int currentRowObj = ((CaperucitaState) obj).getCurrentRow();
+        int currentColumnObj = ((CaperucitaState) obj).getCurrentColumn();
 
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                if (world[row][col] != worldObj[row][col]) {
-                    return false;
-                }
+        for (int i=0; i<wood.length; i++) {
+            for (int j=0; j<wood.length; j++) {
+            	if(wood[i][j] != woodObj[i][j]) {
+            		return false;
+            	}
             }
         }
-
-        if (position[0] != positionObj[0] || position[1] != positionObj[1]) {
+        
+        if (currentRow != currentRowObj || currentColumn != currentColumnObj) {
             return false;
         }
         
         return true;
     }
-
-    public boolean isAllWorldKnown() {
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                if (world[row][col] == PacmanPerception.UNKNOWN_PERCEPTION) {
-                    return false;
-                }
-            }
+    
+    public boolean arrivedToFlowers() {
+        if (wood[currentRow][currentColumn] == CaperucitaPerception.FLOWER_PERCEPTION) {
+        	return true;
         }
-        
-        return true;
+        return false;
+    }
+    
+    //ver la clase pacman
+    public int getWoodPosition(int row, int col) {
+        return wood[row][col];
     }
 
-    public int getUnknownCellsCount() {
-        int result = 0;
-
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                if (world[row][col] == PacmanPerception.UNKNOWN_PERCEPTION) {
-                    result++;
-                }
-            }
-        }
-
-        return result;
+    public void setWoodPosition(int row, int col, int value) {
+        this.wood[row][col] = value;
     }
-
-    public int getRemainingFoodCount() {
-        int result = 0;
-
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                if (world[row][col] == PacmanPerception.FOOD_PERCEPTION) {
-                    result++;
-                }
-            }
-        }
-        
-        return result;
-    }
-
-    public boolean isNoMoreFood() {
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                if (world[row][col] == PacmanPerception.FOOD_PERCEPTION) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    public int getVisitedCellsCount() {
-        return visitedCells;
-    }
-
-    public void increaseVisitedCellsCount() {
-        this.visitedCells = +20;
-    }
-
+    
     public int getCurrentRow() {
 		return currentRow;
 	}
 
-	public void setCurrentRow(int currentRow) {
+	
+    public void setCurrentRow(int currentRow) {
 		this.currentRow = currentRow;
 	}
 
@@ -275,6 +235,14 @@ public class CaperucitaState extends SearchBasedAgentState {
 
 	public void setLives(int lives) {
 		this.lives = lives;
+	}
+
+	public int[][] getWood() {
+		return wood;
+	}
+
+	public void setWood(int[][] wood) {
+		this.wood = wood;
 	}
 
 }

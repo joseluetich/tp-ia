@@ -13,12 +13,8 @@ public class Woods extends Environment {
         return (WoodsState) super.getEnvironmentState();
     }
 
-    /**
-     * This method is called by the simulator. Given the Agent, it creates
-     * a new perception reading, for example, the agent position.
-     * @param agent
-     * @return A perception that will be given to the agent by the simulator.
-     */
+    /* This method is called by the simulator. Given the Agent, it creates
+     * a new perception reading, for example, the agent position.*/
     @Override
     public CaperucitaPerception getPercept() {
         
