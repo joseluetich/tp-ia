@@ -10,6 +10,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import actions.EatCandy;
+import actions.GoForward;
+import actions.TurnLeft;
+import actions.TurnRight;
 
 import java.util.Vector;
 

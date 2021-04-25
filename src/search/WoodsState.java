@@ -18,12 +18,12 @@ public class WoodsState extends EnvironmentState {
     private int agentLives;
     
     public WoodsState() {
-        wood = new int[9][14];
     	this.initState();
     }
 
     @Override
     public void initState() {
+        this.wood = new int[9][14];
     	this.setCandiesQuantity(3);
     	
     	for(int i=0; i<9; i++) {
@@ -115,8 +115,6 @@ public class WoodsState extends EnvironmentState {
 	public void setAgentLives(int agentLives) {
 		this.agentLives = agentLives;
 	}
-
-    
     
 }
 

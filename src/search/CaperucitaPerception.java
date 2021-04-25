@@ -13,6 +13,7 @@ public class CaperucitaPerception extends Perception {
     public static int CANDY_PERCEPTION = 3;
     public static int FLOWER_PERCEPTION = 4;
 
+    //TODO ver sensores
     private int wolfSensor;
     private int flowerSensor;
     private int candySensor;

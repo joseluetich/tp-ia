@@ -46,7 +46,7 @@ public class Woods extends Environment {
     //Este método indica bajo qué condición se considera que el agente ha fallado
     public boolean agentFailed(Action actionReturned) {
     	boolean failed = false;
-
+    	//TODO impletmentar agetn failed
     	//Notar que en este punto tenemos 3 posibilidades inmediatas:
     	//1 - Agregar al estado del ambiente el atributo que nos indica falla (energía)
     	//2 - Agregar un operador que se denomine "apagar" (que vendrá en "actionReturned")
