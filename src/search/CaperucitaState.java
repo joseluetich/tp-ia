@@ -175,8 +175,7 @@ public class CaperucitaState extends SearchBasedAgentState {
         
         if (currentRow != currentRowObj || currentColumn != currentColumnObj) {
             return false;
-        }
-        
+        }   
         return true;
     }
     
