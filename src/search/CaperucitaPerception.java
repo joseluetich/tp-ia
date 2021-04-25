@@ -34,7 +34,7 @@ public class CaperucitaPerception {
         
         //Si lo está, el valor de la percepción será 1; en caso contrario será 0
         if(estaSucia)
-        	suciedad = 1;
+        	suciedad = 100000000;
         else
         	suciedad = 0;
         

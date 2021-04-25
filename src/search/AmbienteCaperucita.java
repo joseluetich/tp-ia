@@ -38,7 +38,7 @@ public class AmbienteCaperucita extends Environment {
         else
         	perception.setsuciedad(0);
         
-        // Return the perception
+        // Return the perception asfasdfasdfadf
         return perception;
     }
 
