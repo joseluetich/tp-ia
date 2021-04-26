@@ -12,52 +12,45 @@ public class TurnRight extends SearchAction {
 
 	@Override
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
-		// TODO
 		CaperucitaState caperucitaState = (CaperucitaState) s;
 
-        int row = caperucitaState.getCurrentRow();
-        int col = caperucitaState.getCurrentColumn();
-
-        /* The 'Eat' action can be selected only if there is food in the current
-         * position. Otherwise return 'null'. */
-        if (caperucitaState.getWood()[row][col] == CaperucitaPerception.CANDY_PERCEPTION) {
-            // If the action is Eat, then the actual position has no more food.
-        	caperucitaState.setWoodPosition(row, col, CaperucitaPerception.EMPTY_PERCEPTION);
-            return caperucitaState;
+        int orientation = caperucitaState.getOrientation();
+        if (orientation == CaperucitaState.LEFT) {
+        	orientation = 1;
+        } else {
+        	orientation++;
         }
-        return null;
+        
+        caperucitaState.setOrientation(orientation);
+        return caperucitaState;
 	}
 
 	@Override
 	public Double getCost() {
-		return new Double(1);
+		return new Double(0);
 	}
 
 	@Override
 	public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-		// TODO
 		WoodsState environmentState = (WoodsState) est;
         CaperucitaState caperucitaState = ((CaperucitaState) ast);
 
-        int row = environmentState.getAgentPosition()[0];
-        int col = environmentState.getAgentPosition()[1];
-
-        if (environmentState.getWood()[row][col] == CaperucitaPerception.CANDY_PERCEPTION) {
-            // Update the real wood
-            environmentState.setWood(row, col, CaperucitaPerception.EMPTY_PERCEPTION);
-            // Update caperucita state
-            caperucitaState.setWoodPosition(row, col, CaperucitaPerception.EMPTY_PERCEPTION);
-            
-            return environmentState;
+        int orientation = caperucitaState.getOrientation();
+        
+        if (orientation == CaperucitaState.LEFT) {
+        	orientation = 1;
+        } else {
+        	orientation++;
         }
-
-        return null;
+        
+        caperucitaState.setOrientation(orientation);
+        environmentState.setAgentOrientation(orientation);
+        return environmentState;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "Go Forward";
+		return "Girar a la derecha";
 	}
 
 	

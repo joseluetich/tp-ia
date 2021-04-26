@@ -12,20 +12,90 @@ public class GoForward extends SearchAction {
 
 	@Override
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
-		// TODO
 		CaperucitaState caperucitaState = (CaperucitaState) s;
 
         int row = caperucitaState.getCurrentRow();
-        int col = caperucitaState.getCurrentColumn();
-
-        /* The 'Eat' action can be selected only if there is food in the current
-         * position. Otherwise return 'null'. */
-        if (caperucitaState.getWood()[row][col] == CaperucitaPerception.CANDY_PERCEPTION) {
-            // If the action is Eat, then the actual position has no more food.
-        	caperucitaState.setWoodPosition(row, col, CaperucitaPerception.EMPTY_PERCEPTION);
-            return caperucitaState;
-        }
-        return null;
+        int column = caperucitaState.getCurrentColumn();
+        int orientation = caperucitaState.getOrientation();
+        int[][] woodActual = caperucitaState.getWood();
+        
+        if(orientation == CaperucitaState.UP) {
+			int rowInitial = row - 1;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
+					caperucitaState.setWoodPosition(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
+		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
+				}
+				else if(woodActual[rowInitial][column] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = caperucitaState.getLives();
+					caperucitaState.setLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				rowInitial--;
+			}
+			caperucitaState.setCurrentRow(rowInitial);
+			caperucitaState.setWood(woodActual);
+		}
+		
+		else if(orientation == CaperucitaState.RIGHT) {
+			int columnInitial = column + 1;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
+					caperucitaState.setWoodPosition(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
+		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
+				}
+				else if(woodActual[row][columnInitial] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = caperucitaState.getLives();
+					caperucitaState.setLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				columnInitial++;
+			}
+			caperucitaState.setCurrentColumn(columnInitial);
+			
+			caperucitaState.setWood(woodActual);
+		}
+		
+		else if(orientation == CaperucitaState.DOWN) {
+			int rowInitial = row + 1;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
+					caperucitaState.setWoodPosition(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
+		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
+				}
+				else if(woodActual[rowInitial][column] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = caperucitaState.getLives();
+					caperucitaState.setLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				rowInitial++;
+			}
+			caperucitaState.setCurrentRow(rowInitial);
+			
+			caperucitaState.setWood(woodActual);
+		}
+		
+		else if(orientation == CaperucitaState.LEFT) {
+			int columnInitial = column - 1;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
+					caperucitaState.setWoodPosition(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
+		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
+				}
+				else if(woodActual[row][columnInitial] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = caperucitaState.getLives();
+					caperucitaState.setLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				columnInitial--;
+			}
+			caperucitaState.setCurrentColumn(columnInitial);
+			
+			caperucitaState.setWood(woodActual);
+		}
+        
+        caperucitaState.setMovements(caperucitaState.getMovements()+1);
+        return caperucitaState;
 	}
 
 	@Override
@@ -35,29 +105,176 @@ public class GoForward extends SearchAction {
 
 	@Override
 	public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-		// TODO
-		WoodsState environmentState = (WoodsState) est;
-        CaperucitaState caperucitaState = ((CaperucitaState) ast);
+		CaperucitaState caperucitaState = (CaperucitaState) ast;
+		WoodsState enviromentState = (WoodsState) est;
 
-        int row = environmentState.getAgentPosition()[0];
-        int col = environmentState.getAgentPosition()[1];
-
-        if (environmentState.getWood()[row][col] == CaperucitaPerception.CANDY_PERCEPTION) {
-            // Update the real wood
-            environmentState.setWood(row, col, CaperucitaPerception.EMPTY_PERCEPTION);
-            // Update caperucita state
-            caperucitaState.setWoodPosition(row, col, CaperucitaPerception.EMPTY_PERCEPTION);
-            
-            return environmentState;
-        }
-
-        return null;
+        int row = enviromentState.getAgentPosition()[0];
+        int column = enviromentState.getAgentPosition()[1];
+        int orientation = enviromentState.getAgentOrientation();
+        int[][] woodActual = enviromentState.getWood();
+        
+        if(orientation == CaperucitaState.UP) {
+			int rowInitial = row - 1;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
+					enviromentState.setWood(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
+				}
+				else if(woodActual[rowInitial][column] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = enviromentState.getAgentLives();
+					enviromentState.setAgentLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				rowInitial--;
+			}
+			// Seteamos nueva posicion de caperucita
+			int[] newPosition = {rowInitial, column};
+			enviromentState.setAgentPosition(newPosition);
+			caperucitaState.setCurrentRow(rowInitial);
+			
+			// Buscamos nueva posicion del lobo
+			int newRowWolf, newColWolf;
+			do {
+				newRowWolf = (int) Math.random()*9;
+				newColWolf = (int) Math.random()*14;
+			} while(woodActual[newRowWolf][newColWolf] != CaperucitaPerception.EMPTY_PERCEPTION);
+			
+			// Seteamos nueva posicion del lobo
+			for(int i=0; i<9; i++) {
+	    		for(int j=0; j<14; j++) {
+	    			if(woodActual[i][j] == CaperucitaPerception.WOLF_PERCEPTION)
+	    				woodActual[i][j] = CaperucitaPerception.EMPTY_PERCEPTION;
+	    		}
+	    	}
+			
+			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
+			
+			enviromentState.setWood(woodActual);
+			caperucitaState.setWood(woodActual); 
+		}
+		
+		else if(orientation == CaperucitaState.RIGHT) {
+			int columnInitial = column + 1;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
+					enviromentState.setWood(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
+				}
+				else if(woodActual[row][columnInitial] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = enviromentState.getAgentLives();
+					enviromentState.setAgentLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				columnInitial++;
+			}
+			// Seteamos nueva posicion de caperucita
+			int[] newPosition = {row, columnInitial};
+			enviromentState.setAgentPosition(newPosition);
+			caperucitaState.setCurrentColumn(columnInitial);
+								
+			//Buscamos nueva posicion del lobo
+			int newRowWolf, newColWolf;
+			do {
+				newRowWolf = (int) Math.random()*9;
+				newColWolf = (int) Math.random()*14;
+			} while(woodActual[newRowWolf][newColWolf] != CaperucitaPerception.EMPTY_PERCEPTION);
+									
+			// Seteamos nueva posicion del lobo
+			for(int i=0; i<9; i++) {
+				for(int j=0; j<14; j++) {
+					if(woodActual[i][j] == CaperucitaPerception.WOLF_PERCEPTION)
+						woodActual[i][j] = CaperucitaPerception.EMPTY_PERCEPTION;
+				}
+			}
+									
+			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
+														
+			enviromentState.setWood(woodActual);
+			caperucitaState.setWood(woodActual); 
+		}
+		
+		else if(orientation == CaperucitaState.DOWN) {
+			int rowInitial = row + 1;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
+					enviromentState.setWood(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
+				}
+				else if(woodActual[rowInitial][column] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = enviromentState.getAgentLives();
+					enviromentState.setAgentLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				rowInitial++;
+			}
+			// Seteamos nueva posicion de caperucita
+			int[] newPosition = {rowInitial, column};
+			enviromentState.setAgentPosition(newPosition);
+			caperucitaState.setCurrentRow(rowInitial);
+					
+			// Buscamos nueva posicion del lobo
+			int newRowWolf, newColWolf;
+			do {
+				newRowWolf = (int) Math.random()*9;
+				newColWolf = (int) Math.random()*14;
+			} while(woodActual[newRowWolf][newColWolf] != CaperucitaPerception.EMPTY_PERCEPTION);
+						
+			// Seteamos nueva posicion del lobo
+			for(int i=0; i<9; i++) {
+				for(int j=0; j<14; j++) {
+					if(woodActual[i][j] == CaperucitaPerception.WOLF_PERCEPTION)
+						woodActual[i][j] = CaperucitaPerception.EMPTY_PERCEPTION;
+				}
+			}
+						
+			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
+						
+			enviromentState.setWood(woodActual);
+			caperucitaState.setWood(woodActual); 
+		}
+		
+		else if(orientation == CaperucitaState.LEFT) {
+			int columnInitial = column - 1;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
+					enviromentState.setWood(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
+				}
+				else if(woodActual[row][columnInitial] == CaperucitaPerception.WOLF_PERCEPTION) {
+					int lives = enviromentState.getAgentLives();
+					enviromentState.setAgentLives(lives--);	
+					// TODO VUELVE A ARRANCAR
+				}
+				columnInitial--;
+			}
+			// Seteamos nueva posicion de caperucita
+			int[] newPosition = {row, columnInitial};
+			enviromentState.setAgentPosition(newPosition);
+			caperucitaState.setCurrentColumn(columnInitial);
+								
+			//Buscamos nueva posicion del lobo
+			int newRowWolf, newColWolf;
+			do {
+				newRowWolf = (int) Math.random()*9;
+				newColWolf = (int) Math.random()*14;
+			} while(woodActual[newRowWolf][newColWolf] != CaperucitaPerception.EMPTY_PERCEPTION);
+									
+			// Seteamos nueva posicion del lobo
+			for(int i=0; i<9; i++) {
+				for(int j=0; j<14; j++) {
+					if(woodActual[i][j] == CaperucitaPerception.WOLF_PERCEPTION)
+						woodActual[i][j] = CaperucitaPerception.EMPTY_PERCEPTION;
+				}
+			}
+									
+			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
+														
+			enviromentState.setWood(woodActual);
+			caperucitaState.setWood(woodActual); 
+		}
+        
+        return enviromentState;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "Go Forward";
+		return "Moverse hacia adelante";
 	}
 
 	

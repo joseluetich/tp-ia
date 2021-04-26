@@ -5,11 +5,17 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 
 public class CaperucitaState extends SearchBasedAgentState {
 
+	public static int UP = 1;
+	public static int RIGHT = 2;
+	public static int DOWN = 3;
+	public static int LEFT = 4;
+	
     private int currentRow;
     private int currentColumn;
     private int orientation;
     private int candies;
     private int lives;
+    private int movements;
     private int[][] wood;
     
     public CaperucitaState(int currentRow, int currentColumn, int orientation, int candies, int lives, int[][] wood) {
@@ -25,12 +31,11 @@ public class CaperucitaState extends SearchBasedAgentState {
     public CaperucitaState() {
 		super();
 		this.candies = 0;
+		this.movements = 0;
 		wood = new int[9][14];
 		this.lives = 3;
 		this.initState();
 	}
-    
-    //TODO Definir metodos goForward, turnLeft, turnRight, eatCandy
     
     @Override
     public void initState() {
@@ -80,53 +85,33 @@ public class CaperucitaState extends SearchBasedAgentState {
 
         int row = this.getCurrentRow();
         int col = this.getCurrentColumn();
-
-        /*En el caso del pacman, usa las percepciones y analiza si 
-         * es la primera o ultima fila/columna para hacerlo aparecer
-         * por el otro lado.
-         * 
-         * Caperucita deberia usar los sensores para ver si hay lobo, 
-         * flores, dulces o arboles.
-         */
-        /*if (col == 0) {
-            col = 3;
-        } else {
-            col = col - 1;
-        }
-        world[row][col] = pacmanPerception.getLeftSensor();
-
-        row = this.getRowPosition();
-        col = this.getColumnPosition();
-
-        if (col == 3) {
-            col = 0;
-        } else {
-            col = col + 1;
-        }
-        world[row][col] = pacmanPerception.getRightSensor();
-
-        row = this.getRowPosition();
-        col = this.getColumnPosition();
-
-        if (row == 0) {
-            row = 3;
-        } else {
-            row = row - 1;
-        }
-        world[row][col] = pacmanPerception.getTopSensor();
-
-
-        row = this.getRowPosition();
-        col = this.getColumnPosition();
-
-        if (row == 3) {
-            row = 0;
-        } else {
-            row = row + 1;
-        }
-        world[row][col] = pacmanPerception.getBottomSensor();
-
-        energy = pacmanPerception.getEnergy();*/
+        int orientation = this.getOrientation();
+        
+        int[] wolfSensor = caperucitaPerception.getWolfSensor();
+        int[][] candySensor = caperucitaPerception.getCandySensor();
+        int[] treeSensor = caperucitaPerception.getTreeSensor(); 
+        int[] flowerSensor = caperucitaPerception.getFlowerSensor();
+        
+         this.candies = caperucitaPerception.getCandies();
+         this.lives = caperucitaPerception.getLives();
+         
+         if(wolfSensor[0] != -1) {
+        	 this.wood[wolfSensor[0]][wolfSensor[1]] = CaperucitaPerception.WOLF_PERCEPTION;
+         }
+         
+         if(flowerSensor[0] != -1) {
+        	 this.wood[flowerSensor[0]][flowerSensor[1]] = CaperucitaPerception.FLOWER_PERCEPTION;
+         }
+         
+         for(int i=0; i<3; i++) {
+        	 if(candySensor[i] != null) {
+        		 this.wood[candySensor[i][0]][candySensor[i][1]] = CaperucitaPerception.CANDY_PERCEPTION; 
+        	 }
+         }
+         
+         if(treeSensor[0] != -1) {
+        	 this.wood[treeSensor[0]][treeSensor[1]] = CaperucitaPerception.TREE_PERCEPTION;
+         }
     }
 
     @Override
@@ -198,8 +183,7 @@ public class CaperucitaState extends SearchBasedAgentState {
     public int getCurrentRow() {
 		return currentRow;
 	}
-
-	
+    
     public void setCurrentRow(int currentRow) {
 		this.currentRow = currentRow;
 	}
@@ -243,5 +227,14 @@ public class CaperucitaState extends SearchBasedAgentState {
 	public void setWood(int[][] wood) {
 		this.wood = wood;
 	}
+
+	public int getMovements() {
+		return movements;
+	}
+
+	public void setMovements(int movements) {
+		this.movements = movements;
+	}
+	
 
 }

@@ -19,11 +19,9 @@ public class EatCandy extends SearchAction {
         int row = caperucitaState.getCurrentRow();
         int col = caperucitaState.getCurrentColumn();
 
-        /* The 'Eat' action can be selected only if there is food in the current
-         * position. Otherwise return 'null'. */
         if (caperucitaState.getWood()[row][col] == CaperucitaPerception.CANDY_PERCEPTION) {
-            // If the action is Eat, then the actual position has no more food.
         	caperucitaState.setWoodPosition(row, col, CaperucitaPerception.EMPTY_PERCEPTION);
+        	caperucitaState.setCandies(caperucitaState.getCandies() + 1);
             return caperucitaState;
         }
         return null;
@@ -61,6 +59,6 @@ public class EatCandy extends SearchAction {
      * when creating a calculus based one. */
     @Override
     public String toString() {
-        return "Eat";
+        return "Comer Dulce";
     }
 }

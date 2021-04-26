@@ -19,7 +19,6 @@ import java.util.Vector;
 public class Caperucita extends SearchBasedAgent {
 
 	public Caperucita() {
-
         // Caperucita Goal
         CaperucitaGoal goal = new CaperucitaGoal();
 
@@ -29,7 +28,7 @@ public class Caperucita extends SearchBasedAgent {
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
-        operators.addElement(new EatCandy());
+        //operators.addElement(new EatCandy());
         operators.addElement(new GoForward());
         operators.addElement(new TurnRight());
         operators.addElement(new TurnLeft());

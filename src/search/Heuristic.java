@@ -12,8 +12,11 @@ public class Heuristic implements IEstimatedCostFunction {
     public double getEstimatedCost(NTree node) {
         CaperucitaState caperucitaState = (CaperucitaState) node.getAgentState();
 
-        //TODO funcion heuristica
-        return (caperucitaState.getUnknownCellsCount() +
-        		caperucitaState.getRemainingFoodCount());
+        //return caperucitaState.getMovements();
+        
+        double candiesLeft = 3 - caperucitaState.getCandies();
+        double livesLeft = 3 - caperucitaState.getLives();
+        return candiesLeft+livesLeft;
+        
     }
 }

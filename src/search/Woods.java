@@ -42,17 +42,17 @@ public class Woods extends Environment {
     public String toString() {
         return environmentState.toString();
     }
-
-    //Este método indica bajo qué condición se considera que el agente ha fallado
+    
+    @Override
     public boolean agentFailed(Action actionReturned) {
-    	boolean failed = false;
-    	//TODO impletmentar agetn failed
-    	//Notar que en este punto tenemos 3 posibilidades inmediatas:
-    	//1 - Agregar al estado del ambiente el atributo que nos indica falla (energía)
-    	//2 - Agregar un operador que se denomine "apagar" (que vendrá en "actionReturned")
-    	//3 - Modificar GoalBasedAgentSimulator para que pase el AgentState en lugar de Action
 
-        return failed;
+        WoodsState woodsState = this.getEnvironmentState();
+
+        int agentLives = woodsState.getAgentLives();
+
+        if(agentLives <= 0)
+            return true;
+
+        return false;
     }
-
 }

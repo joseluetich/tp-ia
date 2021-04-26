@@ -13,13 +13,12 @@ public class CaperucitaPerception extends Perception {
     public static int CANDY_PERCEPTION = 3;
     public static int FLOWER_PERCEPTION = 4;
 
-    //TODO ver sensores
-    private int wolfSensor;
-    private int flowerSensor;
-    private int candySensor;
-    private int treeSensor;
-    private int lives;
-    private int candies;
+    private int[] wolfSensor; // posicion del lobo
+    private int[] flowerSensor; // si esta parada encima de las flores
+    private int[][] candySensor; // cantidad de dulces en el camino
+    private int[] treeSensor; // si hay un arbol en frente
+    private int lives; // cantidad de vidas que tiene caperucita
+    private int candies; // cantidad de dulces que tiene caperucita
 
     public CaperucitaPerception() {
         lives = 3;
@@ -37,11 +36,15 @@ public class CaperucitaPerception extends Perception {
 
         int row = environmentState.getAgentPosition()[0];
         int col = environmentState.getAgentPosition()[1];
+        int orientation = environmentState.getAgentOrientation();
         
-        /*this.setTopSensor(ambienteCaperucita.getTopCell(row, col));
-        this.setLeftSensor(ambienteCaperucita.getLeftCell(row, col));
-        this.setRightSensor(ambienteCaperucita.getRightCell(row, col));
-        this.setBottomSensor(ambienteCaperucita.getBottomCell(row, col));*/
+        this.setWolfSensor(environmentState.thereIsWolf(row, col, orientation));
+        this.setFlowerSensor(environmentState.thereIsFlower(row, col, orientation));
+        this.setCandySensor(environmentState.thereIsCandy(row, col, orientation));
+        this.setTreeSensor(environmentState.thereIsTree(row, col, orientation));
+        this.setLives(environmentState.getAgentLives());
+        this.setCandies(environmentState.getCandiesQuantity());
+        
     }
 
     @Override
@@ -63,35 +66,35 @@ public class CaperucitaPerception extends Perception {
         return str.toString();
     }
     
-    public int getWolfSensor() {
+    public int[] getWolfSensor() {
 		return wolfSensor;
 	}
 
-	public void setWolfSensor(int wolfSensor) {
+	public void setWolfSensor(int[] wolfSensor) {
 		this.wolfSensor = wolfSensor;
 	}
 
-	public int getFlowerSensor() {
+	public int[] getFlowerSensor() {
 		return flowerSensor;
 	}
 
-	public void setFlowerSensor(int flowerSensor) {
+	public void setFlowerSensor(int[] flowerSensor) {
 		this.flowerSensor = flowerSensor;
 	}
 
-	public int getCandySensor() {
+	public int[][] getCandySensor() {
 		return candySensor;
 	}
 
-	public void setCandySensor(int candySensor) {
+	public void setCandySensor(int[][] candySensor) {
 		this.candySensor = candySensor;
 	}
 
-	public int getTreeSensor() {
+	public int[] getTreeSensor() {
 		return treeSensor;
 	}
 
-	public void setTreeSensor(int treeSensor) {
+	public void setTreeSensor(int[] treeSensor) {
 		this.treeSensor = treeSensor;
 	}
 
