@@ -18,22 +18,22 @@ public class Woods extends Environment {
     @Override
     public CaperucitaPerception getPercept() {
         
-    	//Creamos la percepción que el agente obtendría, a partir del estado actual del ambiente
+    	// Create a new perception to return
     	CaperucitaPerception perception = new CaperucitaPerception();
-		
-        //Pimero chequeamos que la habitación en la que está el agente está sucia
-        /*Habitacion h = this.getEnvironmentState().getposicionAspiradora();
-        boolean estaSucia = false;
-        for(Habitacion hab : this.getEnvironmentState().gethabitacionesSucias())
-        	if(hab.getNombre().equals(h.getNombre()))
-        		estaSucia = true;
         
-        //Si lo está, el valor de la percepción será 1; en caso contrario será 0
-        if(estaSucia)
-        	perception.setsuciedad(1);
-        else
-        	perception.setsuciedad(0);
-        */
+        // Get the actual position of the agent to be able to create the perception
+        int row = this.getEnvironmentState().getAgentPosition()[0];
+        int col = this.getEnvironmentState().getAgentPosition()[1];
+        int orientation = this.getEnvironmentState().getAgentOrientation();
+
+        // Set the perception sensors
+        perception.setWolfSensor(this.getEnvironmentState().thereIsWolf(row, col, orientation));
+        perception.setFlowerSensor(this.getEnvironmentState().thereIsFlower(row, col, orientation));
+        perception.setCandySensor(this.getEnvironmentState().thereIsCandy(row, col, orientation));
+        perception.setTreeSensor(this.getEnvironmentState().thereIsTree(row, col, orientation));
+        perception.setLives(this.getEnvironmentState().getAgentLives());
+        perception.setCandies(this.getEnvironmentState().getCandiesQuantity());
+        
         // Return the perception
         return perception;
     }

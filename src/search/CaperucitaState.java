@@ -45,11 +45,9 @@ public class CaperucitaState extends SearchBasedAgentState {
             }
         }
 
-        //TODO Definir posicion y orientacion inicial del agente
-        this.setCurrentRow(0);
-        this.setCurrentColumn(0);
-        this.setOrientation(0);
-
+        this.setCurrentRow(5);
+        this.setCurrentColumn(11);
+        this.setOrientation(1);
     }
     
     /**

@@ -81,12 +81,14 @@ public class WoodsState extends EnvironmentState {
     	/*Ubicacion del lobo*/
     	//TODO aca podemos generarlo aleatoriamente o
     	//darle una posicion inicial
+    	wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
     	
     	/*Ubicacion del campo de flores*/
-    	wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
+    	wood[6][4] = CaperucitaPerception.WOLF_PERCEPTION;
     	
     	/*Ubicacion de caperucita*/
     	this.setAgentPosition(new int[]{5, 11});
+    	this.setAgentOrientation(1);
     	this.setAgentLives(3);
     }
 
