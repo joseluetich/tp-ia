@@ -21,7 +21,9 @@ public class GoForward extends SearchAction {
         
         if(orientation == CaperucitaState.UP) {
 			int rowInitial = row - 1;
+			System.out.println(woodActual[1][column]);
 			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+				System.out.println(rowInitial);
 				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
 					caperucitaState.setWoodPosition(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
 		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
@@ -32,7 +34,9 @@ public class GoForward extends SearchAction {
 					// TODO VUELVE A ARRANCAR
 				}
 				rowInitial--;
+				System.out.println(rowInitial);
 			}
+			System.out.println(rowInitial);
 			caperucitaState.setCurrentRow(rowInitial);
 			caperucitaState.setWood(woodActual);
 		}

@@ -12,32 +12,35 @@ public class WoodsState extends EnvironmentState {
     private int[] agentPosition;
     private int agentOrientation;
     private int agentLives;
-    
+       
+    public static int ROW_SIZE = 9;
+	public static int COLUMN_SIZE = 14;
+	
     public WoodsState() {
     	this.initState();
     }
 
     @Override
     public void initState() {
-        this.wood = new int[9][14];
+        this.wood = new int[ROW_SIZE][COLUMN_SIZE];
     	this.setCandiesQuantity(3);
     	
-    	for(int i=0; i<9; i++) {
-    		for(int j=0; j<14; j++) {
+    	for(int i=0; i<ROW_SIZE; i++) {
+    		for(int j=0; j<COLUMN_SIZE; j++) {
     			wood[i][j] = CaperucitaPerception.EMPTY_PERCEPTION;
     		}
     	}
     	
     	/*Primeras tres columnas con arboles*/
-    	for(int i=0; i<9; i++) {
+    	for(int i=0; i<ROW_SIZE; i++) {
     		for(int j=0; j<3; j++) {
     			wood[i][j] = CaperucitaPerception.TREE_PERCEPTION;
     		}
     	}
     	
     	/*Ultimas dos columnas con arboles*/
-    	for(int i=0; i<9; i++) {
-    		for(int j=12; j<14; j++) {
+    	for(int i=0; i<ROW_SIZE; i++) {
+    		for(int j=12; j<COLUMN_SIZE; j++) {
     			wood[i][j] = CaperucitaPerception.TREE_PERCEPTION;
     		}
     	}
@@ -81,10 +84,10 @@ public class WoodsState extends EnvironmentState {
     	/*Ubicacion del lobo*/
     	//TODO aca podemos generarlo aleatoriamente o
     	//darle una posicion inicial
-    	wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
+    	wood[6][4] = CaperucitaPerception.WOLF_PERCEPTION;
     	
     	/*Ubicacion del campo de flores*/
-    	wood[6][4] = CaperucitaPerception.WOLF_PERCEPTION;
+    	wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
     	
     	/*Ubicacion de caperucita*/
     	this.setAgentPosition(new int[]{5, 11});
@@ -95,11 +98,11 @@ public class WoodsState extends EnvironmentState {
     @Override
     public String toString() {
     	
-        String str = "";
+        String str = "\n";
         int dulces = 0;
         str += "Cantidad De Dulces por juntar: { ";
-        for(int i=0; i<9; i++) {
-    		for(int j=0; j<14; j++) {
+        for(int i=0; i<ROW_SIZE; i++) {
+    		for(int j=0; j<COLUMN_SIZE; j++) {
     			if(wood[i][j] == CaperucitaPerception.CANDY_PERCEPTION) {
     				dulces++;
     			}
@@ -107,10 +110,24 @@ public class WoodsState extends EnvironmentState {
         }
         str += (dulces+" }\n");
         
-        str += ("Cantidad de Vidas: { "+agentLives+" }"); 
+        str += ("Cantidad de Vidas: { "+agentLives+" }\n"); 
         
         str += ("Posicion del Agente: { "+agentPosition[0]+", "+agentPosition[1]+" }"); 
-         
+
+        str = str + "Wood real=\"[ \n";
+        for (int i=0; i<ROW_SIZE; i++) {
+            str = str + "[ ";
+            for (int j=0; j<COLUMN_SIZE; j++) {
+                if (wood[i][j] == -1) {
+                    str = str + "* ";
+                } else {
+                    str = str + wood[i][j] + " ";
+                }
+            }
+            str = str + " ]\n";
+        }
+        str = str + " ]\"";
+        
         return str;
     }
 
@@ -273,34 +290,39 @@ public class WoodsState extends EnvironmentState {
 		int[] result = {-1, -1};
 		
 		if(orientation == CaperucitaState.UP) {
-			if (woodActual[row - 1][column] == CaperucitaPerception.TREE_PERCEPTION) {
-				result[0] = row - 1;
-				result[1] = column;
-				return result;
+			int rowInitial = row - 1;
+			while(woodActual[rowInitial][column]!=CaperucitaPerception.TREE_PERCEPTION) {
+				rowInitial--;
 			}
+			result[0] = rowInitial;
+			result[1] = column;
 		}
 		
 		else if(orientation == CaperucitaState.RIGHT) {
-			if (woodActual[row][column + 1] == CaperucitaPerception.TREE_PERCEPTION) {
-				result[0] = row;
-				result[1] = column + 1;
-				return result;
+			int columnInitial = column + 1;
+			while(woodActual[row][columnInitial]!=CaperucitaPerception.TREE_PERCEPTION) {
+				columnInitial++;
 			}
+			result[0] = row;
+			result[1] = columnInitial;
 		}
 		
 		else if(orientation == CaperucitaState.DOWN) {
-			if (woodActual[row + 1][column] == CaperucitaPerception.TREE_PERCEPTION) {
-				result[0] = row + 1;
-				result[1] = column;
-				return result;
+			int rowInitial = row + 1;
+			while(woodActual[rowInitial][column]!=CaperucitaPerception.TREE_PERCEPTION) {
+				rowInitial++;
 			}
+			result[0] = rowInitial;
+			result[1] = column;
 		}
+		
 		else if(orientation == CaperucitaState.LEFT) {
-			if (woodActual[row][column - 1] == CaperucitaPerception.TREE_PERCEPTION) {
-				result[0] = row;
-				result[1] = column - 1;
-				return result;
+			int columnInitial = column - 1;
+			while(woodActual[row][columnInitial]!=CaperucitaPerception.TREE_PERCEPTION) {
+				columnInitial--;
 			}
+			result[0] = row;
+			result[1] = columnInitial;
 		}
 		
 		return result;

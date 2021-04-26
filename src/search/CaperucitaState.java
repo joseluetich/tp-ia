@@ -10,6 +10,9 @@ public class CaperucitaState extends SearchBasedAgentState {
 	public static int DOWN = 3;
 	public static int LEFT = 4;
 	
+	public static int ROW_SIZE = 9;
+	public static int COLUMN_SIZE = 14;
+	
     private int currentRow;
     private int currentColumn;
     private int orientation;
@@ -32,19 +35,19 @@ public class CaperucitaState extends SearchBasedAgentState {
 		super();
 		this.candies = 0;
 		this.movements = 0;
-		wood = new int[9][14];
 		this.lives = 3;
 		this.initState();
 	}
     
     @Override
     public void initState() {
-        for (int i=0; i<wood.length; i++) {
-            for (int j=0; j<wood.length; j++) {
+    	this.wood = new int[ROW_SIZE][COLUMN_SIZE];
+        for (int i=0; i<ROW_SIZE; i++) {
+            for (int j=0; j<COLUMN_SIZE; j++) {
                 wood[i][j] = CaperucitaPerception.UNKNOWN_PERCEPTION;
             }
         }
-
+        
         this.setCurrentRow(5);
         this.setCurrentColumn(11);
         this.setOrientation(1);
@@ -56,9 +59,9 @@ public class CaperucitaState extends SearchBasedAgentState {
      */
     @Override
     public SearchBasedAgentState clone() {
-        int[][] newWood = new int[9][14];
-        for (int i=0; i<wood.length; i++) {
-            for (int j=0; j<wood.length; j++) {
+        int[][] newWood = new int[ROW_SIZE][COLUMN_SIZE];
+        for (int i=0; i<ROW_SIZE; i++) {
+            for (int j=0; j<COLUMN_SIZE; j++) {
             	newWood[i][j] = wood[i][j];
             }
         }
@@ -116,14 +119,14 @@ public class CaperucitaState extends SearchBasedAgentState {
     public String toString() {
         String str = "";
 
-        str = str + " position=\"(" + getCurrentRow() + "," + "" + getCurrentColumn() + ")\"";
-        str = str + " candies=\"" + candies + "\"";
-        str = str + " lives=\"" + lives + "\"\n";
+        str = str + " Position=\"(" + getCurrentRow() + "," + "" + getCurrentColumn() + ")\"";
+        str = str + " Candies=\"" + candies + "\"";
+        str = str + " Lives=\"" + lives + "\"\n";
 
-        str = str + "wood=\"[ \n";
-        for (int i=0; i<wood.length; i++) {
+        str = str + "Wood percibido=\"[ \n";
+        for (int i=0; i<ROW_SIZE; i++) {
             str = str + "[ ";
-            for (int j=0; j<wood.length; j++) {
+            for (int j=0; j<COLUMN_SIZE; j++) {
                 if (wood[i][j] == -1) {
                     str = str + "* ";
                 } else {
@@ -148,8 +151,8 @@ public class CaperucitaState extends SearchBasedAgentState {
         int currentRowObj = ((CaperucitaState) obj).getCurrentRow();
         int currentColumnObj = ((CaperucitaState) obj).getCurrentColumn();
 
-        for (int i=0; i<wood.length; i++) {
-            for (int j=0; j<wood.length; j++) {
+        for (int i=0; i<ROW_SIZE; i++) {
+            for (int j=0; j<COLUMN_SIZE; j++) {
             	if(wood[i][j] != woodObj[i][j]) {
             		return false;
             	}

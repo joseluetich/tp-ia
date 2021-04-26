@@ -55,13 +55,34 @@ public class CaperucitaPerception extends Perception {
         str.append("; ");
         str.append("Candies: " + this.candies);
         str.append("; ");
-        str.append("Wolf Sensor: " + this.wolfSensor);
-        str.append("; ");
-        str.append("Flower Sensor: " + this.flowerSensor);
-        str.append("; ");
-        str.append("Tree Sensor: " + this.treeSensor);
-        str.append("; ");
-        str.append("Candy Sensor: " + this.candySensor);
+        if(this.wolfSensor[0]==-1) {
+        	str.append("Wolf Sensor: []; ");
+        }
+        else {
+        	str.append("Wolf Sensor: [" + this.wolfSensor[0]+", "+this.wolfSensor[1]+"]; ");
+        }
+
+        if(this.flowerSensor[0]==-1) {
+        	str.append("Flower Sensor: []; ");
+        }
+        else {
+        	str.append("Flower Sensor: [" + this.flowerSensor[0]+", "+this.flowerSensor[1]+"]; ");
+        }
+        
+        if(this.treeSensor[0]==-1) {
+        	str.append("Tree Sensor: []; ");
+        }
+        else {
+        	str.append("Tree Sensor: [" + this.treeSensor[0]+", "+this.treeSensor[1]+"]; ");
+        }
+        
+        str.append("Candy Sensor: [ ");
+        for(int i=0; i<3; i++) {
+        	if(this.candySensor[i][0] != 0) {
+        		str.append("[" + this.candySensor[i][0]+", "+this.candySensor[i][1]+"] ");
+            }
+        }
+        str.append("]; ");
 
         return str.toString();
     }
