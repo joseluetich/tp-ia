@@ -27,30 +27,67 @@ public class WoodsState extends EnvironmentState {
     			wood[i][j] = CaperucitaPerception.EMPTY_PERCEPTION;
     		}
     	}
-    	this.setAgentPosition(new int[]{1, 1}); //ver
+    	
+    	/*Primeras tres columnas con arboles*/
+    	for(int i=0; i<9; i++) {
+    		for(int j=0; j<3; j++) {
+    			wood[i][j] = CaperucitaPerception.TREE_PERCEPTION;
+    		}
+    	}
+    	
+    	/*Ultimas dos columnas con arboles*/
+    	for(int i=0; i<9; i++) {
+    		for(int j=12; j<14; j++) {
+    			wood[i][j] = CaperucitaPerception.TREE_PERCEPTION;
+    		}
+    	}
+    	
+    	for(int j=3; j<12; j++) {
+    		/*Primera fila con arboles*/
+    		wood[0][j] = CaperucitaPerception.TREE_PERCEPTION;
+    		/*Ultima fila con arboles*/
+    		wood[8][j] = CaperucitaPerception.TREE_PERCEPTION;
+    	}
+    	
+    	/*Ubicacion de los demas arboles*/
+    	//Fila 1
+    	wood[1][7] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[1][11] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 2
+    	wood[2][4] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 3
+    	wood[3][9] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 4
+    	wood[4][4] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[4][8] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 5
+    	wood[5][4] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[5][5] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 6
+    	wood[6][5] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][6] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][7] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][9] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][11] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 7
+    	wood[7][6] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[7][11] = CaperucitaPerception.TREE_PERCEPTION;
+    	
+    	/*Ubicacion de los dulces*/
+    	wood[1][3] = CaperucitaPerception.CANDY_PERCEPTION;
+    	wood[1][10] = CaperucitaPerception.CANDY_PERCEPTION;
+    	wood[3][8] = CaperucitaPerception.CANDY_PERCEPTION;
+    	
+    	/*Ubicacion del lobo*/
+    	//TODO aca podemos generarlo aleatoriamente o
+    	//darle una posicion inicial
+    	
+    	/*Ubicacion del campo de flores*/
+    	wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
+    	
+    	/*Ubicacion de caperucita*/
+    	this.setAgentPosition(new int[]{5, 11});
     	this.setAgentLives(3);
-    	
-    	//TODO Diseñar el nivel.
-    	
-    	//Ejemplo pacman
-    	/*
-        for (int row = 0; row < world.length; row++) {
-            for (int col = 0; col < world.length; col++) {
-                world[row][col] = PacmanPerception.EMPTY_PERCEPTION;
-            }
-        }
-
-        // Sets some cells with foods and enemies. 
-        world[0][0] = PacmanPerception.FOOD_PERCEPTION;
-        world[0][2] = PacmanPerception.FOOD_PERCEPTION;
-        world[3][1] = PacmanPerception.ENEMY_PERCEPTION;
-        world[2][1] = PacmanPerception.FOOD_PERCEPTION;
-        world[0][3] = PacmanPerception.ENEMY_PERCEPTION;
-        world[1][2] = PacmanPerception.FOOD_PERCEPTION;
-
-        this.setAgentPosition(new int[]{1, 1});
-        this.setAgentEnergy(50);
-        */
     }
 
     @Override
