@@ -9,7 +9,6 @@ import frsf.cidisi.faia.solver.search.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import actions.EatCandy;
 import actions.GoForward;
 import actions.TurnLeft;
 import actions.TurnRight;
@@ -28,7 +27,6 @@ public class Caperucita extends SearchBasedAgent {
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
-        //operators.addElement(new EatCandy());
         operators.addElement(new GoForward());
         operators.addElement(new TurnRight());
         operators.addElement(new TurnLeft());
@@ -41,9 +39,10 @@ public class Caperucita extends SearchBasedAgent {
     /*This method is executed by the simulator to ask the agent for an action.*/
     @Override
     public Action selectAction() {
-
+    	
         // Create the search strategy
         DepthFirstSearch strategy = new DepthFirstSearch();
+    	//BreathFirstSearch strategy = new BreathFirstSearch();
 
         // Create a Search object with the strategy
         Search searchSolver = new Search(strategy);
@@ -63,7 +62,6 @@ public class Caperucita extends SearchBasedAgent {
         } catch (Exception ex) {
             Logger.getLogger(Caperucita.class.getName()).log(Level.SEVERE, null, ex);
         }
-
         // Return the selected action
         return selectedAction;
     }

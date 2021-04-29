@@ -20,10 +20,9 @@ public class GoForward extends SearchAction {
         int[][] woodActual = caperucitaState.getWood();
         
         if(orientation == CaperucitaState.UP) {
-			int rowInitial = row - 1;
-			System.out.println(woodActual[1][column]);
-			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
-				System.out.println(rowInitial);
+			int rowInitial = row;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[rowInitial][column] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
 					caperucitaState.setWoodPosition(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
 		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
@@ -34,16 +33,19 @@ public class GoForward extends SearchAction {
 					// TODO VUELVE A ARRANCAR
 				}
 				rowInitial--;
-				System.out.println(rowInitial);
 			}
-			System.out.println(rowInitial);
-			caperucitaState.setCurrentRow(rowInitial);
+			if(woodActual[rowInitial][column] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial);
+				caperucitaState.setCurrentColumn(column);
+			}
+			caperucitaState.setCurrentRow(rowInitial+1);
 			caperucitaState.setWood(woodActual);
 		}
 		
 		else if(orientation == CaperucitaState.RIGHT) {
-			int columnInitial = column + 1;
-			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+			int columnInitial = column;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[row][columnInitial] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
 					caperucitaState.setWoodPosition(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
 		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
@@ -61,8 +63,9 @@ public class GoForward extends SearchAction {
 		}
 		
 		else if(orientation == CaperucitaState.DOWN) {
-			int rowInitial = row + 1;
-			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+			int rowInitial = row;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[rowInitial][column] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
 					caperucitaState.setWoodPosition(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
 		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
@@ -80,8 +83,9 @@ public class GoForward extends SearchAction {
 		}
 		
 		else if(orientation == CaperucitaState.LEFT) {
-			int columnInitial = column - 1;
-			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+			int columnInitial = column;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[row][columnInitial] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
 					caperucitaState.setWoodPosition(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
 		        	caperucitaState.setCandies(caperucitaState.getCandies()+1);
@@ -98,7 +102,6 @@ public class GoForward extends SearchAction {
 			caperucitaState.setWood(woodActual);
 		}
         
-        caperucitaState.setMovements(caperucitaState.getMovements()+1);
         return caperucitaState;
 	}
 
@@ -118,8 +121,9 @@ public class GoForward extends SearchAction {
         int[][] woodActual = enviromentState.getWood();
         
         if(orientation == CaperucitaState.UP) {
-			int rowInitial = row - 1;
-			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+			int rowInitial = row;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[rowInitial][column] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
 					enviromentState.setWood(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
@@ -157,8 +161,9 @@ public class GoForward extends SearchAction {
 		}
 		
 		else if(orientation == CaperucitaState.RIGHT) {
-			int columnInitial = column + 1;
-			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+			int columnInitial = column;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[row][columnInitial] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
 					enviromentState.setWood(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
@@ -196,8 +201,9 @@ public class GoForward extends SearchAction {
 		}
 		
 		else if(orientation == CaperucitaState.DOWN) {
-			int rowInitial = row + 1;
-			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION) {
+			int rowInitial = row;
+			while(woodActual[rowInitial][column] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[rowInitial][column] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
 					enviromentState.setWood(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
@@ -235,8 +241,9 @@ public class GoForward extends SearchAction {
 		}
 		
 		else if(orientation == CaperucitaState.LEFT) {
-			int columnInitial = column - 1;
-			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION) {
+			int columnInitial = column;
+			while(woodActual[row][columnInitial] != CaperucitaPerception.TREE_PERCEPTION
+					&& woodActual[row][columnInitial] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[row][columnInitial] == CaperucitaPerception.CANDY_PERCEPTION) {
 					enviromentState.setWood(row, columnInitial, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
@@ -280,8 +287,6 @@ public class GoForward extends SearchAction {
 	public String toString() {
 		return "Moverse hacia adelante";
 	}
-
-	
 
 	
 }

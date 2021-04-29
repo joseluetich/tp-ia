@@ -55,4 +55,13 @@ public class Woods extends Environment {
 
         return false;
     }
+    
+    /*public boolean agentSucceeded(Action actionReturned) {
+    	int wood[][] = this.getEnvironmentState().getWood();
+    	int position[] = this.getEnvironmentState().getAgentPosition();
+    	if (wood[position[0]][position[1]] == CaperucitaPerception.FLOWER_PERCEPTION) {
+        	return true;
+        }
+        return false;
+    }*/
 }

@@ -18,7 +18,6 @@ public class CaperucitaState extends SearchBasedAgentState {
     private int orientation;
     private int candies;
     private int lives;
-    private int movements;
     private int[][] wood;
     
     public CaperucitaState(int currentRow, int currentColumn, int orientation, int candies, int lives, int[][] wood) {
@@ -34,7 +33,6 @@ public class CaperucitaState extends SearchBasedAgentState {
     public CaperucitaState() {
 		super();
 		this.candies = 0;
-		this.movements = 0;
 		this.lives = 3;
 		this.initState();
 	}
@@ -47,6 +45,50 @@ public class CaperucitaState extends SearchBasedAgentState {
                 wood[i][j] = CaperucitaPerception.UNKNOWN_PERCEPTION;
             }
         }
+        
+        wood[2][11] = CaperucitaPerception.FLOWER_PERCEPTION;
+        
+        /*Primeras tres columnas con arboles*/
+    	for(int i=0; i<ROW_SIZE; i++) {
+    		for(int j=0; j<3; j++) {
+    			wood[i][j] = CaperucitaPerception.TREE_PERCEPTION;
+    		}
+    	}
+    	
+    	/*Ultimas dos columnas con arboles*/
+    	for(int i=0; i<ROW_SIZE; i++) {
+    		for(int j=12; j<COLUMN_SIZE; j++) {
+    			wood[i][j] = CaperucitaPerception.TREE_PERCEPTION;
+    		}
+    	}
+    	
+    	for(int j=3; j<12; j++) {
+    		/*Primera fila con arboles*/
+    		wood[0][j] = CaperucitaPerception.TREE_PERCEPTION;
+    		/*Ultima fila con arboles*/
+    		wood[8][j] = CaperucitaPerception.TREE_PERCEPTION;
+    	}
+    	
+    	/*Ubicacion de los demas arboles*/
+    	//Fila 1
+    	wood[1][7] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[1][11] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 2
+    	wood[2][4] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 3
+    	wood[3][9] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 4
+    	wood[4][4] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[4][8] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 5
+    	wood[5][4] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[5][5] = CaperucitaPerception.TREE_PERCEPTION;
+    	//Fila 6
+    	wood[6][5] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][6] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][7] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][9] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[6][11] = CaperucitaPerception.TREE_PERCEPTION;
         
         this.setCurrentRow(5);
         this.setCurrentColumn(11);
@@ -105,7 +147,7 @@ public class CaperucitaState extends SearchBasedAgentState {
          }
          
          for(int i=0; i<3; i++) {
-        	 if(candySensor[i] != null) {
+        	 if(candySensor[i][0]!=0) {
         		 this.wood[candySensor[i][0]][candySensor[i][1]] = CaperucitaPerception.CANDY_PERCEPTION; 
         	 }
          }
@@ -121,9 +163,9 @@ public class CaperucitaState extends SearchBasedAgentState {
 
         str = str + " Position=\"(" + getCurrentRow() + "," + "" + getCurrentColumn() + ")\"";
         str = str + " Candies=\"" + candies + "\"";
-        str = str + " Lives=\"" + lives + "\"\n";
-
-        str = str + "Wood percibido=\"[ \n";
+        str = str + " Lives= " + lives + "\n";
+        
+        str = str + "Wood percibido = [ \n";
         for (int i=0; i<ROW_SIZE; i++) {
             str = str + "[ ";
             for (int j=0; j<COLUMN_SIZE; j++) {
@@ -133,7 +175,7 @@ public class CaperucitaState extends SearchBasedAgentState {
                     str = str + wood[i][j] + " ";
                 }
             }
-            str = str + " ]\n";
+            str = str + "]\n";
         }
         str = str + " ]\"";
 
@@ -172,7 +214,6 @@ public class CaperucitaState extends SearchBasedAgentState {
         return false;
     }
     
-    //ver la clase pacman
     public int getWoodPosition(int row, int col) {
         return wood[row][col];
     }
@@ -228,14 +269,19 @@ public class CaperucitaState extends SearchBasedAgentState {
 	public void setWood(int[][] wood) {
 		this.wood = wood;
 	}
-
-	public int getMovements() {
-		return movements;
-	}
-
-	public void setMovements(int movements) {
-		this.movements = movements;
-	}
 	
+	public int[] getFlowerPosition() {
+		int[] position = {-1, -1};
+		for(int i=0; i<ROW_SIZE; i++) {
+			for(int j=0; j<COLUMN_SIZE; j++) {
+				if(this.getWood()[i][j]==CaperucitaPerception.FLOWER_PERCEPTION) {
+					position[0] = i;
+					position[1] = j;
+				}
+			}
+		}
+		System.out.println("posicionnn "+position);
+		return position;
+	}
 
 }
