@@ -46,7 +46,7 @@ public class CaperucitaState extends SearchBasedAgentState {
             }
         }
         
-        wood[2][11] = CaperucitaPerception.FLOWER_PERCEPTION;
+        wood[2][10] = CaperucitaPerception.FLOWER_PERCEPTION;
         
         /*Primeras tres columnas con arboles*/
     	for(int i=0; i<ROW_SIZE; i++) {
@@ -162,6 +162,7 @@ public class CaperucitaState extends SearchBasedAgentState {
         String str = "";
 
         str = str + " Position=\"(" + getCurrentRow() + "," + "" + getCurrentColumn() + ")\"";
+        str = str + " Orientacion=\"" + getOrientation() + "\"";
         str = str + " Candies=\"" + candies + "\"";
         str = str + " Lives= " + lives + "\n";
         
@@ -192,6 +193,7 @@ public class CaperucitaState extends SearchBasedAgentState {
         int[][] woodObj = ((CaperucitaState) obj).getWood();
         int currentRowObj = ((CaperucitaState) obj).getCurrentRow();
         int currentColumnObj = ((CaperucitaState) obj).getCurrentColumn();
+        int orientationObj = ((CaperucitaState) obj).getOrientation();
 
         for (int i=0; i<ROW_SIZE; i++) {
             for (int j=0; j<COLUMN_SIZE; j++) {
@@ -201,7 +203,8 @@ public class CaperucitaState extends SearchBasedAgentState {
             }
         }
         
-        if (currentRow != currentRowObj || currentColumn != currentColumnObj) {
+        if (currentRow != currentRowObj || currentColumn != currentColumnObj ||
+        		orientation != orientationObj) {
             return false;
         }   
         return true;
@@ -280,7 +283,7 @@ public class CaperucitaState extends SearchBasedAgentState {
 				}
 			}
 		}
-		System.out.println("posicionnn "+position);
+		
 		return position;
 	}
 

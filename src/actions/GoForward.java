@@ -37,8 +37,14 @@ public class GoForward extends SearchAction {
 			if(woodActual[rowInitial][column] == CaperucitaPerception.FLOWER_PERCEPTION) {
 				caperucitaState.setCurrentRow(rowInitial);
 				caperucitaState.setCurrentColumn(column);
+				System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
 			}
-			caperucitaState.setCurrentRow(rowInitial+1);
+			if(woodActual[rowInitial][column] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial+1);
+				caperucitaState.setCurrentColumn(column);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			//caperucitaState.setCurrentRow(rowInitial);
 			caperucitaState.setWood(woodActual);
 		}
 		
@@ -57,7 +63,17 @@ public class GoForward extends SearchAction {
 				}
 				columnInitial++;
 			}
-			caperucitaState.setCurrentColumn(columnInitial);
+			if(woodActual[row][columnInitial] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			if(woodActual[row][columnInitial] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial-1);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			//caperucitaState.setCurrentColumn(columnInitial);
 			
 			caperucitaState.setWood(woodActual);
 		}
@@ -77,7 +93,18 @@ public class GoForward extends SearchAction {
 				}
 				rowInitial++;
 			}
-			caperucitaState.setCurrentRow(rowInitial);
+			if(woodActual[rowInitial][column] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial);
+				caperucitaState.setCurrentColumn(column);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			if(woodActual[rowInitial][column] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial-1);
+				caperucitaState.setCurrentColumn(column);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			
+			//caperucitaState.setCurrentRow(rowInitial);
 			
 			caperucitaState.setWood(woodActual);
 		}
@@ -97,7 +124,18 @@ public class GoForward extends SearchAction {
 				}
 				columnInitial--;
 			}
-			caperucitaState.setCurrentColumn(columnInitial);
+			if(woodActual[row][columnInitial] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			if(woodActual[row][columnInitial] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial+1);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			
+			//caperucitaState.setCurrentColumn(columnInitial);
 			
 			caperucitaState.setWood(woodActual);
 		}
@@ -126,21 +164,39 @@ public class GoForward extends SearchAction {
 					&& woodActual[rowInitial][column] != CaperucitaPerception.FLOWER_PERCEPTION) {
 				if(woodActual[rowInitial][column] == CaperucitaPerception.CANDY_PERCEPTION) {
 					enviromentState.setWood(rowInitial, column, CaperucitaPerception.EMPTY_PERCEPTION);
+					caperucitaState.setCandies(caperucitaState.getCandies()+1);
 				}
 				else if(woodActual[rowInitial][column] == CaperucitaPerception.WOLF_PERCEPTION) {
 					int lives = enviromentState.getAgentLives();
-					enviromentState.setAgentLives(lives--);	
+					enviromentState.setAgentLives(lives--);
+					caperucitaState.setLives(lives--);
 					// TODO VUELVE A ARRANCAR
 				}
 				rowInitial--;
 			}
+			
+			if(woodActual[rowInitial][column] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial);
+				caperucitaState.setCurrentColumn(column);
+				int[] newPosition = {rowInitial, column};
+				enviromentState.setAgentPosition(newPosition);
+				System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			if(woodActual[rowInitial][column] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial+1);
+				caperucitaState.setCurrentColumn(column);
+				int[] newPosition = {rowInitial+1, column};
+				enviromentState.setAgentPosition(newPosition);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			//caperucitaState.setCurrentRow(rowInitial);
+			caperucitaState.setWood(woodActual);
+			
 			// Seteamos nueva posicion de caperucita
-			int[] newPosition = {rowInitial, column};
-			enviromentState.setAgentPosition(newPosition);
-			caperucitaState.setCurrentRow(rowInitial);
+//			caperucitaState.setCurrentRow(rowInitial);
 			
 			// Buscamos nueva posicion del lobo
-			int newRowWolf, newColWolf;
+			/*int newRowWolf, newColWolf;
 			do {
 				newRowWolf = (int) Math.random()*9;
 				newColWolf = (int) Math.random()*14;
@@ -155,8 +211,25 @@ public class GoForward extends SearchAction {
 	    	}
 			
 			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
-			
+			*/
 			enviromentState.setWood(woodActual);
+			
+			String str = "";
+			str = str + "\nWood actual=\"[ \n";
+	        for (int i=0; i<9; i++) {
+	            str = str + "[ ";
+	            for (int j=0; j<14; j++) {
+	                if (woodActual[i][j] == -1) {
+	                    str = str + "* ";
+	                } else {
+	                    str = str + woodActual[i][j] + " ";
+	                }
+	            }
+	            str = str + " ]\n";
+	        }
+	        str = str + " ]\"";
+	        
+			
 			caperucitaState.setWood(woodActual); 
 		}
 		
@@ -174,11 +247,20 @@ public class GoForward extends SearchAction {
 				}
 				columnInitial++;
 			}
-			// Seteamos nueva posicion de caperucita
-			int[] newPosition = {row, columnInitial};
-			enviromentState.setAgentPosition(newPosition);
-			caperucitaState.setCurrentColumn(columnInitial);
-								
+			if(woodActual[row][columnInitial] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial);
+				int[] newPosition = {row, columnInitial};
+				enviromentState.setAgentPosition(newPosition);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			if(woodActual[row][columnInitial] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial-1);
+				int[] newPosition = {row, columnInitial-1};
+				enviromentState.setAgentPosition(newPosition);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}/*
 			//Buscamos nueva posicion del lobo
 			int newRowWolf, newColWolf;
 			do {
@@ -195,7 +277,7 @@ public class GoForward extends SearchAction {
 			}
 									
 			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
-														
+				*/										
 			enviromentState.setWood(woodActual);
 			caperucitaState.setWood(woodActual); 
 		}
@@ -214,11 +296,20 @@ public class GoForward extends SearchAction {
 				}
 				rowInitial++;
 			}
-			// Seteamos nueva posicion de caperucita
-			int[] newPosition = {rowInitial, column};
-			enviromentState.setAgentPosition(newPosition);
-			caperucitaState.setCurrentRow(rowInitial);
-					
+			if(woodActual[rowInitial][column] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial);
+				caperucitaState.setCurrentColumn(column);
+				int[] newPosition = {rowInitial, column};
+				enviromentState.setAgentPosition(newPosition);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			if(woodActual[rowInitial][column] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(rowInitial-1);
+				caperucitaState.setCurrentColumn(column);
+				int[] newPosition = {rowInitial-1, column};
+				enviromentState.setAgentPosition(newPosition);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}/*
 			// Buscamos nueva posicion del lobo
 			int newRowWolf, newColWolf;
 			do {
@@ -235,7 +326,7 @@ public class GoForward extends SearchAction {
 			}
 						
 			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
-						
+						*/
 			enviromentState.setWood(woodActual);
 			caperucitaState.setWood(woodActual); 
 		}
@@ -254,12 +345,22 @@ public class GoForward extends SearchAction {
 				}
 				columnInitial--;
 			}
-			// Seteamos nueva posicion de caperucita
-			int[] newPosition = {row, columnInitial};
-			enviromentState.setAgentPosition(newPosition);
-			caperucitaState.setCurrentColumn(columnInitial);
+			if(woodActual[row][columnInitial] == CaperucitaPerception.FLOWER_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial);
+				int[] newPosition = {row, columnInitial};
+				enviromentState.setAgentPosition(newPosition);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
+			if(woodActual[row][columnInitial] == CaperucitaPerception.TREE_PERCEPTION) {
+				caperucitaState.setCurrentRow(row);
+				caperucitaState.setCurrentColumn(columnInitial+1);
+				int[] newPosition = {row, columnInitial+1};
+				enviromentState.setAgentPosition(newPosition);
+				//System.out.println("nueva pos: ["+rowInitial+", "+column+"] ");
+			}
 								
-			//Buscamos nueva posicion del lobo
+			/*//Buscamos nueva posicion del lobo
 			int newRowWolf, newColWolf;
 			do {
 				newRowWolf = (int) Math.random()*9;
@@ -275,7 +376,7 @@ public class GoForward extends SearchAction {
 			}
 									
 			woodActual[newRowWolf][newColWolf] = CaperucitaPerception.WOLF_PERCEPTION;
-														
+			*/											
 			enviromentState.setWood(woodActual);
 			caperucitaState.setWood(woodActual); 
 		}

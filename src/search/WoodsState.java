@@ -87,7 +87,7 @@ public class WoodsState extends EnvironmentState {
     	wood[6][4] = CaperucitaPerception.WOLF_PERCEPTION;
     	
     	/*Ubicacion del campo de flores*/
-    	wood[2][11] = CaperucitaPerception.FLOWER_PERCEPTION;
+    	wood[2][10] = CaperucitaPerception.FLOWER_PERCEPTION;
     	
     	/*Ubicacion de caperucita*/
     	this.setAgentPosition(new int[]{5, 11});
@@ -112,7 +112,8 @@ public class WoodsState extends EnvironmentState {
         
         str += ("Cantidad de Vidas: { "+agentLives+" }\n"); 
         
-        str += ("Posicion del Agente: { "+agentPosition[0]+", "+agentPosition[1]+" }"); 
+        str += ("Posicion del Agente: { "+agentPosition[0]+", "+agentPosition[1]+" }");
+        str += ("Orientacion del Agente: { "+agentOrientation+" }");
 
         str = str + "\nWood real=\"[ \n";
         for (int i=0; i<ROW_SIZE; i++) {

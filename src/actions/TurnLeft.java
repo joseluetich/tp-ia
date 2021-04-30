@@ -13,15 +13,16 @@ public class TurnLeft extends SearchAction {
 	@Override
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
 		CaperucitaState caperucitaState = (CaperucitaState) s;
-
-        int orientation = caperucitaState.getOrientation();
-        if (orientation == CaperucitaState.UP) {
+		int orientation = caperucitaState.getOrientation();
+		if (orientation == CaperucitaState.UP) {
         	orientation = 4;
+        
         } else {
         	orientation--;
         }
         
         caperucitaState.setOrientation(orientation);
+    	//System.out.println("orientacion2 "+caperucitaState.toString());
         return caperucitaState;
 	}
 
@@ -41,9 +42,10 @@ public class TurnLeft extends SearchAction {
         } else {
         	orientation--;
         }
-       
+        
         caperucitaState.setOrientation(orientation);
         environmentState.setAgentOrientation(orientation);
+        //System.out.println(environmentState.toString());
         return environmentState;
 	}
 
@@ -51,8 +53,4 @@ public class TurnLeft extends SearchAction {
 	public String toString() {
 		return "Girar a la izquierda";
 	}
-
-	
-
-	
 }
