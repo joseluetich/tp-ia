@@ -32,7 +32,7 @@ public class Woods extends Environment {
         perception.setCandySensor(this.getEnvironmentState().thereIsCandy(row, col, orientation));
         perception.setTreeSensor(this.getEnvironmentState().thereIsTree(row, col, orientation));
         perception.setLives(this.getEnvironmentState().getAgentLives());
-        perception.setCandies(this.getEnvironmentState().getCandiesQuantity());
+        perception.setCandies(this.getEnvironmentState().getAgentCandies());
         
         // Return the perception
         return perception;
@@ -53,6 +53,7 @@ public class Woods extends Environment {
 
         if(agentLives <= 0)
             return true;
+        
 
         return false;
     }

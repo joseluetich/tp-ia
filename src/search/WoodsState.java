@@ -8,7 +8,7 @@ import frsf.cidisi.faia.state.EnvironmentState;
 public class WoodsState extends EnvironmentState {
 	
 	private int[][] wood;
-    private int candiesQuantity;
+    private int agentCandies;
     private int[] agentPosition;
     private int agentOrientation;
     private int agentLives;
@@ -23,7 +23,7 @@ public class WoodsState extends EnvironmentState {
     @Override
     public void initState() {
         this.wood = new int[ROW_SIZE][COLUMN_SIZE];
-    	this.setCandiesQuantity(3);
+    	this.setAgentCandies(0);
     	
     	for(int i=0; i<ROW_SIZE; i++) {
     		for(int j=0; j<COLUMN_SIZE; j++) {
@@ -61,6 +61,7 @@ public class WoodsState extends EnvironmentState {
     	//Fila 3
     	wood[3][9] = CaperucitaPerception.TREE_PERCEPTION;
     	//Fila 4
+    	wood[4][3] = CaperucitaPerception.TREE_PERCEPTION;
     	wood[4][4] = CaperucitaPerception.TREE_PERCEPTION;
     	wood[4][8] = CaperucitaPerception.TREE_PERCEPTION;
     	//Fila 5
@@ -82,12 +83,10 @@ public class WoodsState extends EnvironmentState {
     	wood[3][8] = CaperucitaPerception.CANDY_PERCEPTION;
     	
     	/*Ubicacion del lobo*/
-    	//TODO aca podemos generarlo aleatoriamente o
-    	//darle una posicion inicial
-    	wood[6][4] = CaperucitaPerception.WOLF_PERCEPTION;
+    	wood[2][11] = CaperucitaPerception.WOLF_PERCEPTION;
     	
     	/*Ubicacion del campo de flores*/
-    	wood[2][10] = CaperucitaPerception.FLOWER_PERCEPTION;
+    	wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
     	
     	/*Ubicacion de caperucita*/
     	this.setAgentPosition(new int[]{5, 11});
@@ -112,7 +111,7 @@ public class WoodsState extends EnvironmentState {
         
         str += ("Cantidad de Vidas: { "+agentLives+" }\n"); 
         
-        str += ("Posicion del Agente: { "+agentPosition[0]+", "+agentPosition[1]+" }");
+        str += ("Posicion del Agente: { "+agentPosition[0]+", "+agentPosition[1]+" }\n");
         str += ("Orientacion del Agente: { "+agentOrientation+" }");
 
         str = str + "\nWood real=\"[ \n";
@@ -143,13 +142,13 @@ public class WoodsState extends EnvironmentState {
 	public void setWood(int row, int col, int value) {
         this.wood[row][col] = value;
     }
-
-	public int getCandiesQuantity() {
-		return candiesQuantity;
+	
+	public int getAgentCandies() {
+		return agentCandies;
 	}
 
-	public void setCandiesQuantity(int candiesQuantity) {
-		this.candiesQuantity = candiesQuantity;
+	public void setAgentCandies(int candiesQuantity) {
+		this.agentCandies = candiesQuantity;
 	}
 
 	public int[] getAgentPosition() {
@@ -175,7 +174,7 @@ public class WoodsState extends EnvironmentState {
 	public void setAgentLives(int agentLives) {
 		this.agentLives = agentLives;
 	}
-	
+		
 	public int[] thereIsWolf(int row, int column, int orientation) {
 		int[][] woodActual = this.getWood();		
 		int[] result = {-1 , -1};

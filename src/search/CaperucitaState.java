@@ -46,7 +46,7 @@ public class CaperucitaState extends SearchBasedAgentState {
             }
         }
         
-        wood[2][10] = CaperucitaPerception.FLOWER_PERCEPTION;
+        wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
         
         /*Primeras tres columnas con arboles*/
     	for(int i=0; i<ROW_SIZE; i++) {
@@ -78,6 +78,7 @@ public class CaperucitaState extends SearchBasedAgentState {
     	//Fila 3
     	wood[3][9] = CaperucitaPerception.TREE_PERCEPTION;
     	//Fila 4
+    	wood[4][3] = CaperucitaPerception.TREE_PERCEPTION;
     	wood[4][4] = CaperucitaPerception.TREE_PERCEPTION;
     	wood[4][8] = CaperucitaPerception.TREE_PERCEPTION;
     	//Fila 5
@@ -89,7 +90,10 @@ public class CaperucitaState extends SearchBasedAgentState {
     	wood[6][7] = CaperucitaPerception.TREE_PERCEPTION;
     	wood[6][9] = CaperucitaPerception.TREE_PERCEPTION;
     	wood[6][11] = CaperucitaPerception.TREE_PERCEPTION;
-        
+    	//Fila 7
+    	wood[7][6] = CaperucitaPerception.TREE_PERCEPTION;
+    	wood[7][11] = CaperucitaPerception.TREE_PERCEPTION;
+    	
         this.setCurrentRow(5);
         this.setCurrentColumn(11);
         this.setOrientation(1);
@@ -119,17 +123,13 @@ public class CaperucitaState extends SearchBasedAgentState {
     }
 
     /**
-     * This method is used to update the Pacman State when a Perception is
+     * This method is used to update the Agent State when a Perception is
      * received by the Simulator.
      */
     @Override
     public void updateState(Perception p) {
         CaperucitaPerception caperucitaPerception = (CaperucitaPerception) p;
 
-        int row = this.getCurrentRow();
-        int col = this.getCurrentColumn();
-        int orientation = this.getOrientation();
-        
         int[] wolfSensor = caperucitaPerception.getWolfSensor();
         int[][] candySensor = caperucitaPerception.getCandySensor();
         int[] treeSensor = caperucitaPerception.getTreeSensor(); 
@@ -142,9 +142,9 @@ public class CaperucitaState extends SearchBasedAgentState {
         	 this.wood[wolfSensor[0]][wolfSensor[1]] = CaperucitaPerception.WOLF_PERCEPTION;
          }
          
-         if(flowerSensor[0] != -1) {
+         /*if(flowerSensor[0] != -1) {
         	 this.wood[flowerSensor[0]][flowerSensor[1]] = CaperucitaPerception.FLOWER_PERCEPTION;
-         }
+         }*/
          
          for(int i=0; i<3; i++) {
         	 if(candySensor[i][0]!=0) {
@@ -161,10 +161,10 @@ public class CaperucitaState extends SearchBasedAgentState {
     public String toString() {
         String str = "";
 
-        str = str + " Position=\"(" + getCurrentRow() + "," + "" + getCurrentColumn() + ")\"";
-        str = str + " Orientacion=\"" + getOrientation() + "\"";
+        str = str + " Position=\"(" + currentRow + "," + "" + currentColumn + ")\"";
+        str = str + " Orientacion=\"" + orientation + "\"";
         str = str + " Candies=\"" + candies + "\"";
-        str = str + " Lives= " + lives + "\n";
+        str = str + " Lives=\"" + lives +"\"\n";
         
         str = str + "Wood percibido = [ \n";
         for (int i=0; i<ROW_SIZE; i++) {
@@ -271,6 +271,45 @@ public class CaperucitaState extends SearchBasedAgentState {
 
 	public void setWood(int[][] wood) {
 		this.wood = wood;
+	}
+	
+	public boolean todoConocido() {
+        for (int i=0; i<ROW_SIZE; i++) {
+            for (int j=0; j<COLUMN_SIZE; j++) {
+                if (wood[i][j] == CaperucitaPerception.UNKNOWN_PERCEPTION) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+	
+	public boolean hayArbol(int row, int column) {
+		if(wood[row][column] == CaperucitaPerception.TREE_PERCEPTION) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean hayFlores(int row, int column) {
+		if(wood[row][column] == CaperucitaPerception.FLOWER_PERCEPTION) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean hayLobo(int row, int column) {
+		if(wood[row][column] == CaperucitaPerception.WOLF_PERCEPTION) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean hayDulce(int row, int column) {
+		if(wood[row][column] == CaperucitaPerception.CANDY_PERCEPTION) {
+			return true;
+		}
+		return false;
 	}
 	
 	public int[] getFlowerPosition() {

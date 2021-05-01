@@ -43,7 +43,7 @@ public class CaperucitaPerception extends Perception {
         this.setCandySensor(environmentState.thereIsCandy(row, col, orientation));
         this.setTreeSensor(environmentState.thereIsTree(row, col, orientation));
         this.setLives(environmentState.getAgentLives());
-        this.setCandies(environmentState.getCandiesQuantity());
+        this.setCandies(environmentState.getAgentCandies());
         
     }
 

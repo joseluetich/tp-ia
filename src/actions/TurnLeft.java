@@ -22,7 +22,6 @@ public class TurnLeft extends SearchAction {
         }
         
         caperucitaState.setOrientation(orientation);
-    	//System.out.println("orientacion2 "+caperucitaState.toString());
         return caperucitaState;
 	}
 
@@ -45,7 +44,7 @@ public class TurnLeft extends SearchAction {
         
         caperucitaState.setOrientation(orientation);
         environmentState.setAgentOrientation(orientation);
-        //System.out.println(environmentState.toString());
+        
         return environmentState;
 	}
 
