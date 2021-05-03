@@ -157,12 +157,18 @@ public class CaperucitaState extends SearchBasedAgentState {
     public String toString() {
         String str = "";
 
-        str = str + " Position=\"(" + currentRow + "," + "" + currentColumn + ")\"";
-        str = str + " Orientacion=\"" + orientation + "\"";
-        str = str + " Candies=\"" + candies + "\"";
-        str = str + " Lives=\"" + lives +"\"\n";
+        str = str + " Posicion: [" + currentRow + "," + currentColumn + "]";
+        str = str + " Orientacion: \"";
+        switch(orientation) {
+        	case 1: str = str + "Arriba\""; break;
+        	case 2: str = str + "Derecha\""; break;
+        	case 3: str = str + "Abajo\""; break;
+        	case 4: str = str + "Izquierda\""; break;
+        }
+        str = str + " Candies: \"" + candies + "\"";
+        str = str + " Lives: \"" + lives +"\"\n";
         
-        str = str + "Wood percibido = [ \n";
+        str = str + "Bosque percibido = [ \n";
         for (int i=0; i<ROW_SIZE; i++) {
             str = str + "[ ";
             for (int j=0; j<COLUMN_SIZE; j++) {
@@ -174,7 +180,7 @@ public class CaperucitaState extends SearchBasedAgentState {
             }
             str = str + "]\n";
         }
-        str = str + " ]\"";
+        str = str + " ]\"\n";
 
         return str;
     }

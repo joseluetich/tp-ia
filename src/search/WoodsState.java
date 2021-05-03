@@ -83,7 +83,7 @@ public class WoodsState extends EnvironmentState {
     	wood[3][8] = CaperucitaPerception.CANDY_PERCEPTION;
     	
     	/*Ubicacion del lobo*/
-    	wood[2][11] = CaperucitaPerception.WOLF_PERCEPTION;
+    	wood[6][4] = CaperucitaPerception.WOLF_PERCEPTION;
     	
     	/*Ubicacion del campo de flores*/
     	wood[7][7] = CaperucitaPerception.FLOWER_PERCEPTION;
@@ -99,7 +99,7 @@ public class WoodsState extends EnvironmentState {
     	
         String str = "\n";
         int dulces = 0;
-        str += "Cantidad De Dulces por juntar: { ";
+        str += "Cantidad de dulces por juntar: \"";
         for(int i=0; i<ROW_SIZE; i++) {
     		for(int j=0; j<COLUMN_SIZE; j++) {
     			if(wood[i][j] == CaperucitaPerception.CANDY_PERCEPTION) {
@@ -107,14 +107,20 @@ public class WoodsState extends EnvironmentState {
     			}
     		}
         }
-        str += (dulces+" }\n");
+        str += (dulces+"\"; ");
         
-        str += ("Cantidad de Vidas: { "+agentLives+" }\n"); 
+        str += ("Cantidad de Vidas: \""+agentLives+"\"\n"); 
         
-        str += ("Posicion del Agente: { "+agentPosition[0]+", "+agentPosition[1]+" }\n");
-        str += ("Orientacion del Agente: { "+agentOrientation+" }");
+        str += ("Posicion del Agente: ["+agentPosition[0]+", "+agentPosition[1]+"]; ");
+        str += ("Orientacion del Agente: \"");
+        switch(agentOrientation) {
+    	case 1: str = str + "Arriba\""; break;
+    	case 2: str = str + "Derecha\""; break;
+    	case 3: str = str + "Abajo\""; break;
+    	case 4: str = str + "Izquierda\""; break;
+        }
 
-        str = str + "\nWood real=\"[ \n";
+        str = str + "\nWood real = \"[ \n";
         for (int i=0; i<ROW_SIZE; i++) {
             str = str + "[ ";
             for (int j=0; j<COLUMN_SIZE; j++) {

@@ -51,35 +51,35 @@ public class CaperucitaPerception extends Perception {
     public String toString() {
         StringBuffer str = new StringBuffer();
 
-        str.append("Lives: " + this.lives);
+        str.append("Vidas: \"" + this.lives+"\"");
         str.append("; ");
-        str.append("Candies: " + this.candies);
+        str.append("Dulces: \"" + this.candies+"\"");
         str.append("; ");
         if(this.wolfSensor[0]==-1) {
-        	str.append("Wolf Sensor: []; ");
+        	str.append("Sensor lobo: []; ");
         }
         else {
-        	str.append("Wolf Sensor: [" + this.wolfSensor[0]+", "+this.wolfSensor[1]+"]; ");
+        	str.append("Sensor lobo: [" + this.wolfSensor[0]+", "+this.wolfSensor[1]+"]; ");
         }
 
         if(this.flowerSensor[0]==-1) {
-        	str.append("Flower Sensor: []; ");
+        	str.append("Sensor Flores: []; ");
         }
         else {
-        	str.append("Flower Sensor: [" + this.flowerSensor[0]+", "+this.flowerSensor[1]+"]; ");
+        	str.append("Sensor Flores: [" + this.flowerSensor[0]+", "+this.flowerSensor[1]+"]; ");
         }
         
         if(this.treeSensor[0]==-1) {
-        	str.append("Tree Sensor: []; ");
+        	str.append("Sensor Arbol: []; ");
         }
         else {
-        	str.append("Tree Sensor: [" + this.treeSensor[0]+", "+this.treeSensor[1]+"]; ");
+        	str.append("Sensor Arbol: [" + this.treeSensor[0]+", "+this.treeSensor[1]+"]; ");
         }
         
-        str.append("Candy Sensor: [ ");
+        str.append("Sensor Dulces: [");
         for(int i=0; i<3; i++) {
         	if(this.candySensor[i][0] != 0) {
-        		str.append("[" + this.candySensor[i][0]+", "+this.candySensor[i][1]+"] ");
+        		str.append("[" + this.candySensor[i][0]+", "+this.candySensor[i][1]+"]");
             }
         }
         str.append("]; ");
