@@ -17,8 +17,6 @@ public class GoForward extends SearchAction {
         int row = capState.getCurrentRow();
         int column = capState.getCurrentColumn();
         int orientation = capState.getOrientation();
-        int[][] woodPercibido = capState.getWood();
-        
         
         if(orientation == CaperucitaState.UP) {
         	if(capState.hayArbol(row-1,column)) {
@@ -58,14 +56,14 @@ public class GoForward extends SearchAction {
 				else {
 					capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
-				row--; //voy para arriba
+				row--;
         	}
 			if(capState.hayFlores(row, column)) {
 				capState.setCurrentRow(row);
 				capState.setCurrentColumn(column);
 			}
 			if(capState.hayArbol(row, column)) {
-				capState.setCurrentRow(row+1); //si en row hay arbol, debe posicionarse abajo
+				capState.setCurrentRow(row+1);
 				capState.setCurrentColumn(column);
 			}
 		}
@@ -87,7 +85,7 @@ public class GoForward extends SearchAction {
 				else {
 					capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
-				column++; //voy para la derecha
+				column++;
         	}
 			if(capState.hayFlores(row, column)) {
 				capState.setCurrentRow(row);
@@ -145,7 +143,7 @@ public class GoForward extends SearchAction {
 				else {
 					capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
-				column--; //voy para la derecha
+				column--;
         	}
 			if(capState.hayFlores(row, column)) {
 				capState.setCurrentRow(row);
@@ -181,7 +179,6 @@ public class GoForward extends SearchAction {
         			woodState.setWood(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
         			woodState.setAgentCandies(woodState.getAgentCandies() + 1);
         			capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
-        			//capState.setCandies(capState.getCandies()+1);
         		}
         		else if(capState.hayLobo(row,column)) {
         			woodState.setAgentLives(woodState.getAgentLives()-1);
@@ -195,11 +192,12 @@ public class GoForward extends SearchAction {
         	    	capState.setCurrentRow(5);
         	    	capState.setCurrentColumn(11);
         	    	capState.setOrientation(1);
+        	    	break;
 				}
 				else {
 					capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
 				}
-				row--; //voy para arriba
+				row--;
         	}
 			if(capState.hayFlores(row, column)) {
 				capState.setCurrentRow(row);
@@ -208,7 +206,7 @@ public class GoForward extends SearchAction {
 				woodState.setAgentPosition(newPosition);
 			}
 			if(capState.hayArbol(row, column)) {
-				capState.setCurrentRow(row+1); //si en row hay arbol, debe posicionarse abajo
+				capState.setCurrentRow(row+1);
 				capState.setCurrentColumn(column);
 				int[] newPosition = {row+1, column};
 				woodState.setAgentPosition(newPosition);
@@ -233,9 +231,6 @@ public class GoForward extends SearchAction {
 				}
 			}
 			woodState.setWood(newRowWolf, newColWolf, CaperucitaPerception.WOLF_PERCEPTION);
-			
-			//woodState.setWood(wood);	        
-			//capState.setWood(wood);
 		}
         
         if(orientation == CaperucitaState.RIGHT) {
@@ -244,7 +239,6 @@ public class GoForward extends SearchAction {
         			woodState.setWood(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
         			woodState.setAgentCandies(woodState.getAgentCandies() + 1);
         			capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
-        			//capState.setCandies(capState.getCandies()+1);
         		}
         		else if(capState.hayLobo(row,column)) {
         			woodState.setAgentLives(woodState.getAgentLives()-1);
@@ -258,6 +252,7 @@ public class GoForward extends SearchAction {
         	    	capState.setCurrentRow(5);
         	    	capState.setCurrentColumn(11);
         	    	capState.setOrientation(1);
+        	    	break;
 				}
 				else {
 					capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
@@ -271,7 +266,7 @@ public class GoForward extends SearchAction {
 				woodState.setAgentPosition(newPosition);
 			}
 			if(capState.hayArbol(row, column)) {
-				capState.setCurrentRow(row); //si en row hay arbol, debe posicionarse abajo
+				capState.setCurrentRow(row);
 				capState.setCurrentColumn(column-1);
 				int[] newPosition = {row, column-1};
 				woodState.setAgentPosition(newPosition);
@@ -295,9 +290,6 @@ public class GoForward extends SearchAction {
 				}
 			}
 			woodState.setWood(newRowWolf, newColWolf, CaperucitaPerception.WOLF_PERCEPTION);
-						
-			//woodState.setWood(wood);	        
-			//capState.setWood(wood);
 		}
         
         if(orientation == CaperucitaState.DOWN) {
@@ -306,7 +298,6 @@ public class GoForward extends SearchAction {
         			woodState.setWood(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
         			woodState.setAgentCandies(woodState.getAgentCandies() + 1);
         			capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
-        			//capState.setCandies(capState.getCandies()+1);
         		}
         		else if(capState.hayLobo(row,column)) {
         			woodState.setAgentLives(woodState.getAgentLives()-1);
@@ -320,6 +311,7 @@ public class GoForward extends SearchAction {
         	    	capState.setCurrentRow(5);
         	    	capState.setCurrentColumn(11);
         	    	capState.setOrientation(1);
+        	    	break;
 				}
 				else {
 					capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
@@ -357,9 +349,6 @@ public class GoForward extends SearchAction {
 				}
 			}
 			woodState.setWood(newRowWolf, newColWolf, CaperucitaPerception.WOLF_PERCEPTION);
-			
-			//woodState.setWood(wood);	        
-			//capState.setWood(wood);
 		}
 			
         if(orientation == CaperucitaState.LEFT) {
@@ -368,7 +357,6 @@ public class GoForward extends SearchAction {
         			woodState.setWood(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
         			capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
         			woodState.setAgentCandies(woodState.getAgentCandies() + 1);
-        			//capState.setCandies(capState.getCandies()+1);
         		}
         		else if(capState.hayLobo(row,column)) {
         			woodState.setAgentLives(woodState.getAgentLives()-1);
@@ -382,6 +370,7 @@ public class GoForward extends SearchAction {
         	    	capState.setCurrentRow(5);
         	    	capState.setCurrentColumn(11);
         	    	capState.setOrientation(1);
+        	    	break;
 				}
 				else {
 					capState.setWoodPosition(row, column, CaperucitaPerception.EMPTY_PERCEPTION);
@@ -395,7 +384,7 @@ public class GoForward extends SearchAction {
 				woodState.setAgentPosition(newPosition);
 			}
 			if(capState.hayArbol(row, column)) {
-				capState.setCurrentRow(row); //si en row hay arbol, debe posicionarse abajo
+				capState.setCurrentRow(row);
 				capState.setCurrentColumn(column+1);
 				int[] newPosition = {row, column+1};
 				woodState.setAgentPosition(newPosition);
@@ -419,9 +408,6 @@ public class GoForward extends SearchAction {
 				}
 			}
 			woodState.setWood(newRowWolf, newColWolf, CaperucitaPerception.WOLF_PERCEPTION);
-									
-			//woodState.setWood(wood);	        
-			//capState.setWood(wood);
 		}
      
         return woodState;

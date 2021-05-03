@@ -142,10 +142,6 @@ public class CaperucitaState extends SearchBasedAgentState {
         	 this.wood[wolfSensor[0]][wolfSensor[1]] = CaperucitaPerception.WOLF_PERCEPTION;
          }
          
-         /*if(flowerSensor[0] != -1) {
-        	 this.wood[flowerSensor[0]][flowerSensor[1]] = CaperucitaPerception.FLOWER_PERCEPTION;
-         }*/
-         
          for(int i=0; i<3; i++) {
         	 if(candySensor[i][0]!=0) {
         		 this.wood[candySensor[i][0]][candySensor[i][1]] = CaperucitaPerception.CANDY_PERCEPTION; 
@@ -272,17 +268,6 @@ public class CaperucitaState extends SearchBasedAgentState {
 	public void setWood(int[][] wood) {
 		this.wood = wood;
 	}
-	
-	public boolean todoConocido() {
-        for (int i=0; i<ROW_SIZE; i++) {
-            for (int j=0; j<COLUMN_SIZE; j++) {
-                if (wood[i][j] == CaperucitaPerception.UNKNOWN_PERCEPTION) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 	
 	public boolean hayArbol(int row, int column) {
 		if(wood[row][column] == CaperucitaPerception.TREE_PERCEPTION) {

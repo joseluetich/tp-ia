@@ -1,5 +1,5 @@
-<tree id="11" edgedefault="directed">
-<node Id="0" Action="null" Cost="0.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<tree id="25" edgedefault="directed">
+<node Id="0" Action="null" Cost="0.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
@@ -11,7 +11,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="1" Action="Moverse hacia adelante" Cost="1.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="1" Action="Moverse hacia adelante" Cost="1.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
@@ -23,7 +23,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="2" Action="Girar a la derecha" Cost="1.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="2" Action="Girar a la derecha" Cost="1.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -35,7 +35,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="3" Action="Girar a la izquierda" Cost="1.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="3" Action="Girar a la izquierda" Cost="1.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -47,7 +47,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="4" Action="Girar a la derecha" Cost="2.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="4" Action="Girar a la derecha" Cost="2.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
@@ -59,7 +59,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="5" Action="Girar a la izquierda" Cost="2.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="5" Action="Girar a la izquierda" Cost="2.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
@@ -71,7 +71,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="9" Action="Moverse hacia adelante" Cost="3.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="9" Action="Moverse hacia adelante" Cost="3.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -83,7 +83,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="10" Action="Girar a la derecha" Cost="3.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="10" Action="Girar a la derecha" Cost="3.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
@@ -95,7 +95,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="16" Action="Girar a la derecha" Cost="4.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="16" Action="Girar a la derecha" Cost="4.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -107,7 +107,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="17" Action="Girar a la izquierda" Cost="4.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="17" Action="Girar a la izquierda" Cost="4.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -119,7 +119,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="26" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="26" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -131,7 +131,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="27" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="27" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -143,7 +143,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="42" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="42" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -155,7 +155,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="43" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="43" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -167,7 +167,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="65" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(7,7)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="65" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(7,7)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -179,7 +179,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 0 0 0 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="66" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="66" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -191,7 +191,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="67" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="67" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -203,7 +203,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="44" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="44" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -215,7 +215,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="45" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="45" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -227,7 +227,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="68" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="68" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -239,7 +239,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="69" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="69" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -251,7 +251,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="28" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="28" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -263,7 +263,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="46" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="46" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -275,7 +275,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="47" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="47" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -287,7 +287,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="70" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="70" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -299,7 +299,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="71" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="71" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -311,331 +311,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="72" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * 0 * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 0 * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * 0 * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 0 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="18" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="19" Action="Girar a la derecha" Cost="4.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="29" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="30" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="48" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="49" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="73" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="74" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="75" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="50" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="76" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="11" Action="Girar a la izquierda" Cost="3.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="20" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="21" Action="Girar a la izquierda" Cost="4.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="31" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="32" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="51" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="52" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="77" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="78" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="79" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="53" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="80" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="33" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="54" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="55" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
-Wood percibido = [ 
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
-[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
-[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
-[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
-[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
-[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
-[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
-[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
-[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
- ]&quot;"/>
-<node Id="81" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="72" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -647,7 +323,283 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="82" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="18" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="19" Action="Girar a la derecha" Cost="4.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="29" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="30" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="48" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="49" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="73" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="74" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="75" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="50" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="76" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="11" Action="Girar a la izquierda" Cost="3.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="20" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="21" Action="Girar a la izquierda" Cost="4.0" Estado_Agente=" Position=&quot;(1,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="31" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="32" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="51" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="52" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="77" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="78" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="79" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="53" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="80" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 * * 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="33" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -659,7 +611,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="83" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="54" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
@@ -671,7 +623,55 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="6" Action="Girar a la derecha" Cost="2.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="55" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="81" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(7,10)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * 0 * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 0 * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * 0 * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 0 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * 0 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="82" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="83" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,10)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
+Wood percibido = [ 
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+[ 1 1 1 0 0 0 0 1 0 0 0 1 1 1 ]
+[ 1 1 1 0 1 * 0 * 0 * * * 1 1 ]
+[ 1 1 1 0 0 0 0 0 0 1 * * 1 1 ]
+[ 1 1 1 1 1 * 0 * 1 * * * 1 1 ]
+[ 1 1 1 * 1 1 0 0 0 0 0 0 1 1 ]
+[ 1 1 1 * * 1 1 1 * 1 * 1 1 1 ]
+[ 1 1 1 * * * 1 4 * * * 1 1 1 ]
+[ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
+ ]&quot;"/>
+<node Id="6" Action="Girar a la derecha" Cost="2.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -683,7 +683,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="12" Action="Girar a la derecha" Cost="3.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="12" Action="Girar a la derecha" Cost="3.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -695,7 +695,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="22" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="22" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -707,7 +707,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="34" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="34" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -719,7 +719,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="35" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="35" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -731,7 +731,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="56" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="56" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -743,7 +743,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="57" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="57" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -755,7 +755,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="84" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="84" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -767,7 +767,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="85" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="85" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -779,7 +779,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="86" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="86" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -791,7 +791,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="58" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="58" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -803,7 +803,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="87" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="87" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -815,7 +815,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="7" Action="Moverse hacia adelante" Cost="2.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="7" Action="Moverse hacia adelante" Cost="2.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -827,7 +827,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="8" Action="Girar a la izquierda" Cost="2.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="8" Action="Girar a la izquierda" Cost="2.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -839,7 +839,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="13" Action="Girar a la derecha" Cost="3.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="13" Action="Girar a la derecha" Cost="3.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -851,7 +851,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="14" Action="Girar a la izquierda" Cost="3.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="14" Action="Girar a la izquierda" Cost="3.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -863,7 +863,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="23" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="23" Action="Moverse hacia adelante" Cost="4.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -875,7 +875,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="24" Action="Girar a la derecha" Cost="4.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="24" Action="Girar a la derecha" Cost="4.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -887,7 +887,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="36" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="36" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -899,7 +899,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="37" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="37" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -911,7 +911,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="59" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,6)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="59" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,6)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -923,7 +923,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="60" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="60" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -935,7 +935,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="88" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,6)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="88" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,6)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -947,7 +947,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="89" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,6)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="89" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,6)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -959,7 +959,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="90" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="90" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -971,7 +971,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="91" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="91" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -983,7 +983,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="61" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="61" Action="Girar a la izquierda" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -995,7 +995,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="92" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="92" Action="Moverse hacia adelante" Cost="7.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1007,7 +1007,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="93" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="93" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1019,7 +1019,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="38" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="38" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1031,7 +1031,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="39" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="39" Action="Girar a la derecha" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1043,7 +1043,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="62" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="62" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1055,7 +1055,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="25" Action="Girar a la izquierda" Cost="4.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="25" Action="Girar a la izquierda" Cost="4.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1067,7 +1067,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="40" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="40" Action="Moverse hacia adelante" Cost="5.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1079,7 +1079,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="41" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="41" Action="Girar a la izquierda" Cost="5.0" Estado_Agente=" Position=&quot;(3,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1091,7 +1091,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="63" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="63" Action="Girar a la derecha" Cost="6.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;3&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1103,7 +1103,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="64" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="64" Action="Moverse hacia adelante" Cost="6.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;1&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1115,7 +1115,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="94" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="94" Action="Girar a la derecha" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1127,7 +1127,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="95" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="95" Action="Girar a la izquierda" Cost="7.0" Estado_Agente=" Position=&quot;(1,3)&quot; Orientacion=&quot;4&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]
@@ -1139,7 +1139,7 @@ Wood percibido = [
 [ 1 1 1 * * * 1 4 * * * 1 1 1 ]
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
  ]&quot;"/>
-<node Id="15" Action="Girar a la izquierda" Cost="3.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;3&quot;
+<node Id="15" Action="Girar a la izquierda" Cost="3.0" Estado_Agente=" Position=&quot;(3,8)&quot; Orientacion=&quot;2&quot; Candies=&quot;2&quot; Lives=&quot;2&quot;
 Wood percibido = [ 
 [ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ]
 [ 1 1 1 0 0 0 0 1 * * * 1 1 1 ]

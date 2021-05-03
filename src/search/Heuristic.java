@@ -16,10 +16,6 @@ public class Heuristic implements IEstimatedCostFunction {
         int distanceY = caperucitaState.getFlowerPosition()[1] - caperucitaState.getCurrentColumn();
         double dX = (distanceX)^2;
         double dY = (distanceY)^2;
-        return dX+dY;
-        
-        //int distanceX = 2 - caperucitaState.getCurrentRow();
-        //int distanceY = 10 - caperucitaState.getCurrentColumn();
-        //return distanceX+distanceY;
+        return Math.sqrt(dX+dY);
     }
 }
